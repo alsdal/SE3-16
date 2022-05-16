@@ -267,7 +267,7 @@
 									"font": "Arial;13;0",
 									"left": 308.5,
 									"top": 196.5,
-									"width": 96,
+									"width": 97.140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAeuBCbZfw4IQ="
@@ -665,7 +665,7 @@
 									"font": "Arial;13;0",
 									"left": 298.5,
 									"top": 540.5,
-									"width": 127,
+									"width": 127.7109375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAeuBybphM2ZM="
@@ -1686,7 +1686,7 @@
 									"font": "Arial;13;0",
 									"left": 527,
 									"top": 612.5,
-									"width": 109,
+									"width": 110.140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAeubVSSWW4SI="
@@ -2147,9 +2147,9 @@
 																"$ref": "AAAAAAGAu3fcm/8biu4="
 															},
 															"font": "Arial;13;0",
-															"left": 24.72998046875,
+															"left": 24.45703125,
 															"top": 5,
-															"width": 86.2236328125,
+															"width": 88.140625,
 															"height": 13,
 															"text": "상품 정보 검색"
 														},
@@ -2162,7 +2162,7 @@
 															"font": "Arial;13;1",
 															"left": 5,
 															"top": 5,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -5951,9 +5951,9 @@
 																"$ref": "AAAAAAGAvDWJSt3nAOw="
 															},
 															"font": "Arial;13;0",
-															"left": 24.72998046875,
+															"left": 24.45703125,
 															"top": 5,
-															"width": 56.61181640625,
+															"width": 57.5703125,
 															"height": 13,
 															"text": "상품 구매"
 														},
@@ -5966,7 +5966,7 @@
 															"font": "Arial;13;1",
 															"left": 5,
 															"top": 5,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -9150,9 +9150,9 @@
 																"$ref": "AAAAAAGAvDcOQ9/j5d8="
 															},
 															"font": "Arial;13;0",
-															"left": 24.72998046875,
+															"left": 24.45703125,
 															"top": 5,
-															"width": 115.83544921875,
+															"width": 118.7109375,
 															"height": 13,
 															"text": "상품 구매 내역 조회"
 														},
@@ -9165,7 +9165,7 @@
 															"font": "Arial;13;1",
 															"left": 5,
 															"top": 5,
-															"width": 14.72998046875,
+															"width": 14.45703125,
 															"height": 13,
 															"text": "sd"
 														}
@@ -17501,17 +17501,18 @@
 									"model": {
 										"$ref": "AAAAAAGAvQLY1HTrfDE="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 599,
-									"top": 432,
+									"left": 564,
+									"top": 463,
+									"width": 71.89990234375,
 									"height": 13,
-									"alpha": 1.5707963267948966,
-									"distance": 15,
+									"alpha": -1.5707957385596025,
+									"distance": 17,
 									"hostEdge": {
 										"$ref": "AAAAAAGAvQLY1HTv4bY="
 									},
-									"edgePosition": 1
+									"edgePosition": 1,
+									"text": "+includes ▶"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -17545,8 +17546,9 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 599,
+									"left": 573,
 									"top": 462,
+									"width": 53.69482421875,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -17608,11 +17610,11 @@
 									},
 									"font": "Arial;13;0",
 									"left": 522,
-									"top": 460,
+									"top": 432,
 									"width": 7.22998046875,
 									"height": 13,
-									"alpha": -0.5235987755982988,
-									"distance": 25,
+									"alpha": 0.6458409379070125,
+									"distance": 26.40075756488817,
 									"hostEdge": {
 										"$ref": "AAAAAAGAvQLY1HTv4bY="
 									},
@@ -17670,11 +17672,11 @@
 									},
 									"font": "Arial;13;0",
 									"left": 662,
-									"top": 459,
+									"top": 431,
 									"width": 23.12451171875,
 									"height": 13,
-									"alpha": 0.5235987755982988,
-									"distance": 25,
+									"alpha": -0.6036546595747034,
+									"distance": 26.627053911388696,
 									"hostEdge": {
 										"$ref": "AAAAAAGAvQLY1HTv4bY="
 									},
@@ -17770,6 +17772,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGAvIVYDcKBGfM="
 							},
+							"name": "includes ▶",
 							"end1": {
 								"_type": "UMLAssociationEnd",
 								"_id": "AAAAAAGAvQLY1HTsdn8=",
@@ -17815,7 +17818,8 @@
 								"$ref": "AAAAAAGAvIVYDcKBGfM="
 							},
 							"name": "구매 만족도",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
