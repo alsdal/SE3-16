@@ -9,11 +9,11 @@ class ListSoldoutClothes
 private:
     SoldoutClothes soldoutClothes;
 public:
-    void showSoldoutList(SellingClothesCollection sellingClothesCollection);
+    string showSoldoutList(SellingClothesCollection sellingClothesCollection);
 };
 
-void ListSoldoutClothes::showSoldoutList(SellingClothesCollection sellingClothesCollection){
-    soldoutClothes.listSoldoutClothes( sellingClothesCollection);
+string ListSoldoutClothes::showSoldoutList(SellingClothesCollection sellingClothesCollection){
+    return soldoutClothes.listSoldoutClothes( sellingClothesCollection);
 }
 
 #endif

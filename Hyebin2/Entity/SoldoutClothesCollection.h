@@ -10,21 +10,26 @@ class SoldoutClothesCollection
 {
 private:
     Clothes* memberSoldoutClothes[MAX_NUMBER_OF_CLOTEHS];
-    int clothesNum;
 public:
-    void getSoldoutClothes(SellingClothesCollection sellingClothesCollection);
+    int clothesNum;
+    string getSoldoutClothes(SellingClothesCollection sellingClothesCollection);
 };
 
-void SoldoutClothesCollection::getSoldoutClothes(SellingClothesCollection sellingClothesCollection){
+string SoldoutClothesCollection::getSoldoutClothes(SellingClothesCollection sellingClothesCollection){
     for(int i = 0; i<sellingClothesCollection.clothesNum; i++){
         if(sellingClothesCollection.memberSellingClothes[i]->getamount() == 0){
             memberSoldoutClothes[clothesNum++] = sellingClothesCollection.memberSellingClothes[i];
         }
     }
 
+    string str;
+    //앞에 판매자 ID, 뒤에 만족도 붙이기
     for(int i = 0; i<clothesNum; i++){
-        memberSoldoutClothes[i]->getClothesDetail();
+        str += memberSoldoutClothes[i]->getClothesDetail();
+        str += memberSoldoutClothes[i]->getSatisfaction();
+        str += '\n';
     }
+    return str;
 }
 
 

@@ -14,11 +14,11 @@ private:
     ListSellingClothes listSellingClothes;
 public:
 //메인에서 collection 받기
-    void showSellingClothesList(SellingClothesCollection sellingClothesCollection);
+    string showSellingClothesList(SellingClothesCollection sellingClothesCollection);
 };
 
-void ListSellingClothesUI::showSellingClothesList(SellingClothesCollection sellingClothesCollection){
-    listSellingClothes.getSellingClothesList(sellingClothesCollection);
+string ListSellingClothesUI::showSellingClothesList(SellingClothesCollection sellingClothesCollection){
+    return listSellingClothes.getSellingClothesList(sellingClothesCollection);
 }
 
 

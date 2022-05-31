@@ -11,12 +11,12 @@ class ListSoldoutClothesUI
     private:
         ListSoldoutClothes listSoldoutClothes;
     public:
-        void showSoldoutList(SellingClothesCollection sellingClothesCollection);
+        string showSoldoutList(SellingClothesCollection sellingClothesCollection);
 };
 
 
-void ListSoldoutClothesUI::showSoldoutList(SellingClothesCollection sellingClothesCollection){
-    listSoldoutClothes.showSoldoutList(sellingClothesCollection);
+string ListSoldoutClothesUI::showSoldoutList(SellingClothesCollection sellingClothesCollection){
+    return listSoldoutClothes.showSoldoutList(sellingClothesCollection);
 }
 
 #endif

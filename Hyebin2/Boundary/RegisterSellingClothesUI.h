@@ -14,12 +14,14 @@ private:
     RegisterSellingClothes registerSellingClothes;
 public:
 //메인에서 넘겨줘야함
-    Clothes* addSellingClothes(string ClothesName, string clothesCompanyName, int price, int amount );
+    RegisterSellingClothesUI(void){}
+    ~RegisterSellingClothesUI(void){}
+    Clothes* addSellingClothes(string ClothesName, string clothesCompanyName, int price, int amount, string SellerID );
     void showRegistPage(){};
 };
 
-Clothes* RegisterSellingClothesUI::addSellingClothes(string ClothesName, string clothesCompanyName, int price, int amount ){
-    return registerSellingClothes.addSellingClothes(ClothesName, clothesCompanyName, price,  amount);
+Clothes* RegisterSellingClothesUI::addSellingClothes(string ClothesName, string clothesCompanyName, int price, int amount, string SellerID ){
+    return registerSellingClothes.addSellingClothes(ClothesName, clothesCompanyName, price,  amount, SellerID);
     
 }
 #endif

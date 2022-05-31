@@ -9,29 +9,36 @@
 using namespace std;
 
 
+
 class SellingClothesCollection
 {
     private:
     public:
+        SellingClothesCollection(void){}
         int clothesNum;
-        Clothes* memberSellingClothes[MAX_NUMBER_OF_CLOTEHS];
-        Clothes* addNewClothesMember(string clothesName, string clothesCompanyName, int price, int amount);
-        void getClothes(SellingClothesCollection sellingClothesCollection);
+        Clothes* memberSellingClothes[MAX_NUMBER_OF_CLOTEHS] = {};
+        Clothes* addNewClothesMember(string clothesName, string clothesCompanyName, int price, int amount, string SellerID);
+        string getClothes(SellingClothesCollection sellingClothesCollection);
+        ~SellingClothesCollection(void){}
+        
         
 
 };
 
-Clothes* SellingClothesCollection::addNewClothesMember(string clothesName, string clothesCompanyName, int price, int amount) {
-    Clothes *newclothes = new Clothes(clothesName,clothesCompanyName,price, amount);
-    memberSellingClothes[clothesNum++] = newclothes;
-    return *(this->memberSellingClothes);
+Clothes* SellingClothesCollection::addNewClothesMember(string clothesName, string clothesCompanyName, int price, int amount, string SellerID) {
+    memberSellingClothes[0] = new Clothes(clothesName,clothesCompanyName,price, amount);
+    memberSellingClothes[0]->setSellerID(SellerID);
+    return  memberSellingClothes[0];
 }
 
-void SellingClothesCollection::getClothes(SellingClothesCollection sellingClothesCollection)
+string SellingClothesCollection::getClothes(SellingClothesCollection sellingClothesCollection)
 {
+    string str;
     for (int i = 0; i < sellingClothesCollection.clothesNum; i++) {
-        sellingClothesCollection.memberSellingClothes[i]->getClothesDetail();
+        str += sellingClothesCollection.memberSellingClothes[i]->getClothesDetail();
+        str += '\n';
     }
+    return str;
 }
 
 #endif

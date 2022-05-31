@@ -14,11 +14,11 @@ class PrintSoldStatisticsUI
 private:
     PrintSoldStatistics printSoldStatistics;
 public:
-    void getSoldStatistics(SellingClothesCollection sellingClothesCollection);
+    string getSoldStatistics(SellingClothesCollection sellingClothesCollection);
 };
 
-void PrintSoldStatisticsUI::getSoldStatistics(SellingClothesCollection sellingClothesCollection){
-    printSoldStatistics.getSellingStatistics(sellingClothesCollection);
+string PrintSoldStatisticsUI::getSoldStatistics(SellingClothesCollection sellingClothesCollection){
+    return printSoldStatistics.getSellingStatistics(sellingClothesCollection);
 }
 
 

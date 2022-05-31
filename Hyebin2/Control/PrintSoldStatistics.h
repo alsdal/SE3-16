@@ -15,11 +15,11 @@ class PrintSoldStatistics
 private:
     SellingStatistics sellingStatistics;
 public:
-    void getSellingStatistics(SellingClothesCollection sellingClothesCollection);
+    string getSellingStatistics(SellingClothesCollection sellingClothesCollection);
 };
 
-void PrintSoldStatistics::getSellingStatistics(SellingClothesCollection sellingClothesCollection){
-    sellingStatistics.getSellingStatistics(sellingClothesCollection);
+string PrintSoldStatistics::getSellingStatistics(SellingClothesCollection sellingClothesCollection){
+    return sellingStatistics.getSellingStatistics(sellingClothesCollection);
 }
 
 #endif

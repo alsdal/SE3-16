@@ -10,12 +10,12 @@ class ListSellingClothes
     private:
         SellingClothes sellingClothes;
     public:
-        void getSellingClothesList(SellingClothesCollection sellingClothesCollection);
+        string getSellingClothesList(SellingClothesCollection sellingClothesCollection);
 };
 
 
-void ListSellingClothes::getSellingClothesList(SellingClothesCollection sellingClothesCollection){
-    sellingClothes.listSellingClothes(sellingClothesCollection);
+string ListSellingClothes::getSellingClothesList(SellingClothesCollection sellingClothesCollection){
+    return sellingClothes.listSellingClothes(sellingClothesCollection);
 }
 
 #endif

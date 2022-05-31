@@ -14,12 +14,12 @@ class SellingClothes
     private:
         SellingClothesCollection sellingClothesCollection;
     public:
-        void listSellingClothes(SellingClothesCollection sellingClothesCollection);
+        string listSellingClothes(SellingClothesCollection sellingClothesCollection);
 };
 
 
-void SellingClothes::listSellingClothes(SellingClothesCollection sellingClothesCollection){
-    sellingClothesCollection.getClothes(sellingClothesCollection);
+string SellingClothes::listSellingClothes(SellingClothesCollection sellingClothesCollection){
+    return sellingClothesCollection.getClothes(sellingClothesCollection);
     /*Clothes* clothes = sellingClothesCollection.findFirst();
     while(clothes != NULL){
         string detail = clothes->getClothesDetail();

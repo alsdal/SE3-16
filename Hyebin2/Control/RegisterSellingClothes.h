@@ -9,12 +9,15 @@ class RegisterSellingClothes
     private:
         SellingClothesCollection sellingClothesCollection;
     public:
-        Clothes* addSellingClothes(string clothesName, string clothesCompanyName, int price, int amount);
+        RegisterSellingClothes(void){} 
+        ~RegisterSellingClothes(void){}
+        Clothes* addSellingClothes(string clothesName, string clothesCompanyName, int price, int amount, string SellerID );
 };
 
 
-Clothes* RegisterSellingClothes::addSellingClothes(string clothesName, string clothesCompanyName, int price, int amount){
-    return sellingClothesCollection.addNewClothesMember(clothesName,  clothesCompanyName, price, amount);
+Clothes* RegisterSellingClothes::addSellingClothes(string clothesName, string clothesCompanyName, int price, int amount, string SellerID ){
+   return sellingClothesCollection.addNewClothesMember(clothesName,  clothesCompanyName, price, amount,SellerID);
+
 }
 
 
