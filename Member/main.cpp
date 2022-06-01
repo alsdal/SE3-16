@@ -1,12 +1,14 @@
 // 헤더 선언
 #include <iostream>
-#include <string>
 #include <fstream>
+#include <string>
+
 using namespace std;
 
 #include "./RegisterUI.h"
 #include "./Register.h"
 #include "./LoginUI.h"
+
 
 // 상수 선언
 #define MAX_STRING 32
@@ -20,28 +22,30 @@ void withdrawMem();
 void loginMem();
 void logoutMem();
 void program_exit();
+
+
+
+// 변수 선언
+ifstream readFile(INPUT_FILE_NAME);
+ofstream writeFile(OUTPUT_FILE_NAME);
+
 int num = 0;
 bool Log = false;
 MemberList memberList;
 RegisterUI registerUI;
 LoginUI loginUI;
 
-
-// 변수 선언
-ifstream readFile;
-ofstream writeFile;
+string userID = "NULL";
 
 int main() 
 {
 	// 파일 입출력을 위한 초기화
-	readFile.open(INPUT_FILE_NAME);
 	if (!readFile)
 	{
 		perror("error fopen input.txt");
 		return 0;
 	}
 
-	writeFile.open(OUTPUT_FILE_NAME);
 	if (!writeFile)
 	{
 		perror("error fopen output.txt");

@@ -1,113 +1,140 @@
+// Çì´õ ¼±¾ğ
 #include <vector>
 #include <sstream>
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
 
-
+#include "./RegisterUI.h"
+#include "./Register.h"
+#include "./LoginUI.h"
 #include "./Boundary/RegisterSellingClothesUI.h"
 #include "./Boundary/ListSellingClothesUI.h"
 #include "./Boundary/ListSoldoutClothesUI.h"
 #include "./Boundary/PrintSoldStatisticsUI.h"
 #include "./Entity/SellingClothesCollection.h"
 
-
+// »ó¼ö ¼±¾ğ
 #define MAX_STRING 32
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 
-//í•¨ìˆ˜ ì„ ì–¸
+// ÇÔ¼ö ¼±¾ğ
 void doTask();
-void join();
+void registerMem();
+void withdrawMem();
+void loginMem();
+void logoutMem();
 void regist();
 void listing();
 void listingSoldout();
 void printStatistics();
-bool program_exit();
-
-//ë³€ìˆ˜ì„ ì–¸
-ifstream readFile;
-ofstream writeFile;
-int num = 0;
+void program_exit();
+MemberList memberList;
+RegisterUI registerUI;
+LoginUI loginUI;
 SellingClothesCollection sellingClothesCollection;
 RegisterSellingClothesUI registerSellingClothesUI;
 ListSellingClothesUI listSellingClothesUI;
 ListSoldoutClothesUI l1stSoldoutClothesUI;
 PrintSoldStatisticsUI printSoldStatisticsUI;
 
-string userID = "SEUser";
+// º¯¼ö ¼±¾ğ
+ifstream readFile;
+ofstream writeFile;
+string userID = "NULL";
+int num = 0;
+bool Log = false;
 
-
-int main()
+int main() 
 {
-    readFile.open(INPUT_FILE_NAME);
+	// ÆÄÀÏ ÀÔÃâ·ÂÀ» À§ÇÑ ÃÊ±âÈ­
+	readFile.open(INPUT_FILE_NAME);
 	if (!readFile)
 	{
 		perror("error fopen input.txt");
 		return 0;
 	}
-    writeFile.open(OUTPUT_FILE_NAME);
+
+	writeFile.open(OUTPUT_FILE_NAME);
 	if (!writeFile)
 	{
 		perror("error fopen output.txt");
 		return 0;
 	}
 
-	
 	doTask();
-    readFile.close();
-    writeFile.close();
+
+	readFile.close();
+	writeFile.close();
 	return 0;
 }
 
+
 void doTask()
 {
-	// ë©”ë‰´ íŒŒì‹±ì„ ìœ„í•œ level êµ¬ë¶„ì„ ìœ„í•œ ë³€ìˆ˜
-	int menu_level_1 = 0;
-	int menu_level_2 = 0;
-	bool is_program_exit = false;
-	while (!is_program_exit)
+	// ¸Ş´º ÆÄ½ÌÀ» À§ÇÑ level ±¸ºĞÀ» À§ÇÑ º¯¼ö
+	int menu_level_1 = 0, menu_level_2 = 0;
+	int is_program_exit = 0;
+
+	while (is_program_exit == 0)
 	{
-		// ì…ë ¥íŒŒì¼ì—ì„œ ë©”ë‰´ ìˆ«ì 2ê°œë¥¼ ì½ê¸°
-        readFile >> menu_level_1 >> menu_level_2;
-		
-		//  ë©”ë‰´ êµ¬ë¶„ ë° í•´ë‹¹ ì—°ì‚° ìˆ˜í–‰
+		// ÀÔ·ÂÆÄÀÏ¿¡¼­ ¸Ş´º ¼ıÀÚ 2°³¸¦ ÀĞ±â
+		readFile >> menu_level_1 >> menu_level_2;
+
+		// ¸Ş´º ±¸ºĞ ¹× ÇØ´ç ¿¬»ê ¼öÇà
 		switch (menu_level_1)
 		{
-			case 1:	
+		case 1:
+		{
+			switch (menu_level_2)
 			{
-				switch (menu_level_2)
-				{
-					case 1: 
-					{
-						join();
-
-						break;
-					}
-					default:
-						break;
-				}
-                break;
+			case 1:		// 1.1 È¸¿ø°¡ÀÔ
+			{
+				registerMem();
+				break;
 			}
-            case 3:
+			case 2:		// 1.2 È¸¿øÅ»Åğ
+			{
+				withdrawMem();
+				break;
+			}
+			}
+		}
+		case 2:
+		{
+			switch (menu_level_2)
+			{
+			case 1:		// 2.1 ·Î±×ÀÎ
+			{
+				loginMem();
+				break;
+			}
+			case 2:		// 2.2 ·Î±×¾Æ¿ô
+			{
+				logoutMem();
+				break;
+			}
+			}
+		}
+		case 3:
             {
                 switch(menu_level_2)
                 {
-                    //íŒë§¤ ì˜ë¥˜ ë“±ë¡, (ìƒí’ˆëª…, ì œì‘íšŒì‚¬ëª…, ê°€ê²©, ìˆ˜ëŸ‰)
+                    //ÆÇ¸Å ÀÇ·ù µî·Ï, (»óÇ°¸í, Á¦ÀÛÈ¸»ç¸í, °¡°İ, ¼ö·®)
                     case 1:
                     {
                         regist();
                         break;
                     }
-                    //ë“±ë¡ ìƒí’ˆ ì¡°íšŒ
+                    //µî·Ï »óÇ° Á¶È¸
                     case 2:
                     {
                         listing();
                         break;
                     }
-                    //íŒë§¤ ì™„ë£Œ ìƒí’ˆ ì¡°íšŒ
+                    //ÆÇ¸Å ¿Ï·á »óÇ° Á¶È¸
                     case 3:
                     {
                         listingSoldout();
@@ -130,56 +157,80 @@ void doTask()
                 }
                 break;
             }
-            case 6:
-            {
-                switch (menu_level_2)
-                {
-                case 1:
-                    is_program_exit = program_exit();
-                    break;
-                
-                default:
-                    break;
+		case 6:
+		{
+			switch (menu_level_2)
+			{
+			case 1:   // "6.1. Á¾·á¡° ¸Ş´º ºÎºĞ
+			{
+				program_exit();
+				is_program_exit = 1;
+				break;
+			}
+			}
 
-                }
-                break;
-            }
+		}
+		return;
 		}
 	}
+}
+
+
+void registerMem()
+{
+	char name[MAX_STRING], regNum[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
+	readFile >> name >> regNum >> ID >> password;
+	memberList.memberList[num++] = registerUI.enterInfo(name,regNum,ID,password);
+
+	writeFile << "1.1 È¸¿ø°¡ÀÔ" << endl;
+	writeFile << "> " << name << " " << regNum << " " << ID << " " << password << endl;
+
 	return;
 }
 
-void join()
+void withdrawMem()
 {
-	string user_type, name, SSN,
-		address, ID, password;
+	writeFile << "1.2 È¸¿øÅ»Åğ" << endl;
+	writeFile << "> ";
 
-	// ì…ë ¥ í˜•ì‹ : ì´ë¦„, ì£¼ë¯¼ë²ˆí˜¸, ID, Passwordë¥¼ íŒŒì¼ë¡œë¶€í„° ì½ìŒ
-	//fscanf_s(in_fp, "%s %s %s %s", name, MAX_STRING, SSN, MAX_STRING, ID, MAX_STRING, password, MAX_STRING);
+	return;
+}
+void loginMem(){
+	char ID[MAX_STRING], password[MAX_STRING];
+	readFile >> ID >> password;
 
-	// / í•´ë‹¹ ê¸°ëŠ¥ ìˆ˜í–‰
+	Log = loginUI.login(ID, password);
+	userID = ID;
 
-	// ì¶œë ¥ í˜•ì‹
-	//writeFile.write()
-	//fprintf(out_fp, "%s %s %s %s\n", name, SSN, ID, password);
+	writeFile << "2.1 ·Î±×ÀÎ" << endl;
+	writeFile << "> ";
+
+
+	return;
 }
 
-//ìœ ì € ì•„ì´ë”” ë„£ëŠ”ê±° í•´ì•¼í• ë“¯
+void logoutMem() {
+	writeFile << "2.2 ·Î±×¾Æ¿ô" << endl;
+	writeFile << "> ";
+
+	return;
+}
+
+//À¯Àú ¾ÆÀÌµğ ³Ö´Â°Å ÇØ¾ßÇÒµí
 void regist(){
     string clothesName, companyName;
     int price, amount;
     readFile >> clothesName >> companyName >> price >> amount;
     sellingClothesCollection.memberSellingClothes[num++] = registerSellingClothesUI.addSellingClothes(clothesName, companyName, price, amount, userID);
     sellingClothesCollection.clothesNum++;
-    string str = "3.1. íŒë§¤ ì˜ë¥˜ ë“±ë¡\n";
+    string str = "3.1. ÆÇ¸Å ÀÇ·ù µî·Ï\n";
     str+= ("> " + clothesName + " " + companyName + " " + to_string(price) + " " + to_string(amount));
     writeFile << str;
     writeFile << "\n";
 }
 
 void listing(){
-    // cout << listSellingClothesUI.showSellingClothesList(sellingClothesCollection) << endl;
-    string str = "3.2. ë“±ë¡ìƒí’ˆì¡°íšŒ\n";
+    string str = "3.2. µî·Ï»óÇ°Á¶È¸\n";
     str += "> ";
     str+= listSellingClothesUI.showSellingClothesList(sellingClothesCollection);
     writeFile << str;
@@ -187,8 +238,7 @@ void listing(){
 }
 
 void listingSoldout(){
-    //cout << l1stSoldoutClothesUI.showSoldoutList(sellingClothesCollection) <<  endl;
-    string str = "3.3. íŒë§¤ ì™„ë£Œ ìƒí’ˆ ì¡°íšŒ\n";
+    string str = "3.3. ÆÇ¸Å ¿Ï·á »óÇ° Á¶È¸\n";
     str += "> ";
     str+= l1stSoldoutClothesUI.showSoldoutList(sellingClothesCollection);
     writeFile << str;
@@ -196,15 +246,15 @@ void listingSoldout(){
 }
 
 void printStatistics(){
-    string str = "5.1. íŒë§¤ ìƒí’ˆ í†µê³„\n";
+    string str = "5.1. ÆÇ¸Å »óÇ° Åë°è\n";
     str += "> ";
     str+= printSoldStatisticsUI.getSoldStatistics(sellingClothesCollection);
     writeFile << str;
     writeFile << "\n";
 }
 
-bool program_exit()
-{
- return true;
-}
 
+void program_exit()
+{
+	return;
+}
