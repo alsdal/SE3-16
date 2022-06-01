@@ -30,7 +30,7 @@ ifstream readFile(INPUT_FILE_NAME);
 ofstream writeFile(OUTPUT_FILE_NAME);
 
 int num = 0;
-bool Log = false;
+string userID = "NULL";
 MemberList memberList;
 RegisterUI registerUI;
 LoginUI loginUI;
@@ -148,13 +148,13 @@ void loginMem(){
 	char ID[MAX_STRING], password[MAX_STRING];
 	readFile >> ID >> password;
 
-	Log = loginUI.login(ID, password);
+	loginUI.login(ID, password);
+	userID = ID;
 
 	writeFile << "2.1 ·Î±×ÀÎ" << endl;
 	writeFile << "> ";
 
-
-	return;
+	return ;
 }
 
 void logoutMem() {

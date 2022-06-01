@@ -13,5 +13,6 @@ public:
 	MemberList();
 	Member* memberList[10];
 	Member* addNewMember(string memberName, string memberRegNumber, string memberID, string memberPassword);
+	bool checkIDPW(string memberID, string memberPassword);
 
 };

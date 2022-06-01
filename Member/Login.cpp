@@ -7,5 +7,5 @@ Login::Login()
 
 bool Login::loginMember(string memberID, string memberPassword)
 {
-	return false;
+	return memberList.checkIDPW(memberID, memberPassword);
 }
