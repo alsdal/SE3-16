@@ -11,3 +11,11 @@ Member * MemberList::addNewMember(string memberName, string memberRegNumber, str
 	return memberList[0];
 }
 
+bool MemberList::checkIDPW(string memberID, string memberPassword)
+{
+	if (memberID) {
+		return true;
+	}
+	else
+		return false;
+}

@@ -26,6 +26,7 @@ string Member::getMember()
 	return this->memberName;
 }
 
+
 void Member::deleteMember()
 {
 	return;

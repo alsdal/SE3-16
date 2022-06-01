@@ -6,7 +6,6 @@ using namespace std;
 class Member
 {
 private:
-	Member * memberList[50];
 	string memberName;
 	string memberRegNumber;
 	string memberID;
