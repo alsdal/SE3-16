@@ -109,22 +109,18 @@ void doTask()
                     //판매 의류 등록, (상품명, 제작회사명, 가격, 수량)
                     case 1:
                     {
-                        cout<< menu[2] << " " << menu[3] <<" "<< menu[4] << " " <<menu[5] << endl;
-                        cout << "3.1 process" <<endl;
                         regist(menu[2] ,menu[3],  stoi(menu[4]), stoi(menu[5]),userID);
                         break;
                     }
                     //등록 상품 조회
                     case 2:
                     {
-                        cout << "3.2 process" <<endl;
                         listing();
                         break;
                     }
                     //판매 완료 상품 조회
                     case 3:
                     {
-                        cout << "3.3 process" <<endl;
                         listingSoldout();
                         break;
                     }
@@ -150,7 +146,6 @@ void doTask()
                 switch (menu_level_2)
                 {
                 case 1:
-                cout << "6.1" << endl;
                     is_program_exit = program_exit();
                     break;
                 
