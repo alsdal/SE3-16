@@ -33,6 +33,7 @@ public:
     void setSellerID(string sellerID){this->sellerID =sellerID;};
     string getSellerID(){return this->sellerID;};
     int getamount(){return this->amount;};
+    string getClothesName(){return this->clothesName;};
     int getPrice(){return this->price;};
     string getClothesName(){return this->clothesName;};
     int getSatisfaction(){return this->satisfaction;};
