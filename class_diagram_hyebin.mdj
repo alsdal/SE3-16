@@ -454,6 +454,7 @@
 											"model": {
 												"$ref": "AAAAAAGBCB/UdXQq/FA="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 525,
 											"top": 555,
@@ -467,7 +468,7 @@
 									"left": 520,
 									"top": 505,
 									"width": 342.56640625,
-									"height": 68
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -526,16 +527,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 525,
-											"top": 580,
+											"top": 565,
 											"width": 332.56640625,
 											"height": 13,
-											"text": "+listSoldoutClothes()",
+											"text": "+listSoldoutClothes(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 520,
-									"top": 573,
+									"top": 558,
 									"width": 342.56640625,
 									"height": 25
 								},
@@ -635,7 +636,7 @@
 											"font": "Arial;13;1",
 											"left": 1013,
 											"top": 535,
-											"width": 214.7919921875,
+											"width": 224.71337890625,
 											"height": 13,
 											"text": "SoldClothesCollection"
 										},
@@ -670,7 +671,7 @@
 									"font": "Arial;13;0",
 									"left": 1008,
 									"top": 528,
-									"width": 224.7919921875,
+									"width": 234.71337890625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBANwIoFBadbs="
@@ -707,16 +708,16 @@
 											"font": "Arial;13;0",
 											"left": 1013,
 											"top": 558,
-											"width": 214.7919921875,
+											"width": 224.71337890625,
 											"height": 13,
-											"text": "-memberSoldClothes: SoldClothes[*]",
+											"text": "-memberSoldClothes: Clothes*",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1008,
 									"top": 553,
-									"width": 224.7919921875,
+									"width": 234.71337890625,
 									"height": 23
 								},
 								{
@@ -741,7 +742,7 @@
 											"font": "Arial;13;0",
 											"left": 1013,
 											"top": 581,
-											"width": 214.7919921875,
+											"width": 224.71337890625,
 											"height": 13,
 											"text": "+findFirst(): Clothes*",
 											"horizontalAlignment": 0
@@ -758,7 +759,7 @@
 											"font": "Arial;13;0",
 											"left": 1013,
 											"top": 596,
-											"width": 214.7919921875,
+											"width": 224.71337890625,
 											"height": 13,
 											"text": "+getNext(): Clothes*",
 											"horizontalAlignment": 0
@@ -775,7 +776,7 @@
 											"font": "Arial;13;0",
 											"left": 1013,
 											"top": 611,
-											"width": 214.7919921875,
+											"width": 224.71337890625,
 											"height": 13,
 											"text": "+getSoldoutClothes(): String",
 											"horizontalAlignment": 0
@@ -784,7 +785,7 @@
 									"font": "Arial;13;0",
 									"left": 1008,
 									"top": 576,
-									"width": 224.7919921875,
+									"width": 234.71337890625,
 									"height": 53
 								},
 								{
@@ -824,7 +825,7 @@
 							"containerChangeable": true,
 							"left": 1008,
 							"top": 528,
-							"width": 224.7919921875,
+							"width": 234.71337890625,
 							"height": 116,
 							"nameCompartment": {
 								"$ref": "AAAAAAGBANwIn1BZ1/k="
@@ -1227,7 +1228,7 @@
 											"top": 174,
 											"width": 240.95703125,
 											"height": 13,
-											"text": "-memberSellingClothes: SellingClothes[*]",
+											"text": "-memberSellingClothes: Clothes*",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1972,7 +1973,7 @@
 											"top": 160,
 											"width": 223,
 											"height": 13,
-											"text": "+getSellingStatistics()",
+											"text": "+getSellingStatistics(): String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2063,12 +2064,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBBeITsMbB+OM="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
-											"left": 533,
+											"left": 269,
 											"top": 725,
-											"width": 335,
-											"height": 13,
-											"text": "«boundary»"
+											"width": 607,
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -2077,9 +2078,9 @@
 												"$ref": "AAAAAAGBBeITsMbB+OM="
 											},
 											"font": "Arial;13;1",
-											"left": 533,
-											"top": 740,
-											"width": 335,
+											"left": 269,
+											"top": 727,
+											"width": 607,
 											"height": 13,
 											"text": "User Interface :: RegisterSellingClothesUI"
 										},
@@ -2091,7 +2092,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 565,
+											"left": 37,
 											"top": 675,
 											"width": 335,
 											"height": 13,
@@ -2105,17 +2106,17 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -84,
+											"left": -612,
 											"top": -292,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 528,
+									"left": 264,
 									"top": 720,
-									"width": 345,
-									"height": 38,
+									"width": 617,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBBeITsMbCh9E="
 									},
@@ -2139,9 +2140,9 @@
 										"$ref": "AAAAAAGBBdWnVrh1Si8="
 									},
 									"font": "Arial;13;0",
-									"left": 528,
-									"top": 758,
-									"width": 345,
+									"left": 264,
+									"top": 745,
+									"width": 617,
 									"height": 10
 								},
 								{
@@ -2164,11 +2165,11 @@
 												"$ref": "AAAAAAGBBd4CfsSUBLc="
 											},
 											"font": "Arial;13;0",
-											"left": 533,
-											"top": 773,
-											"width": 335,
+											"left": 269,
+											"top": 760,
+											"width": 607,
 											"height": 13,
-											"text": "+add selling Clothes()",
+											"text": "+add selling Clothes(clothesName: String, companyName: String, price: Integer, amount: Integer)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2181,18 +2182,18 @@
 												"$ref": "AAAAAAGBBd4JIcSaiHI="
 											},
 											"font": "Arial;13;0",
-											"left": 533,
-											"top": 788,
-											"width": 335,
+											"left": 269,
+											"top": 775,
+											"width": 607,
 											"height": 13,
 											"text": "+show regist page()",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 528,
-									"top": 768,
-									"width": 345,
+									"left": 264,
+									"top": 755,
+									"width": 617,
 									"height": 38
 								},
 								{
@@ -2206,7 +2207,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 528,
+									"left": 264,
 									"top": 821,
 									"width": 345,
 									"height": 10
@@ -2222,7 +2223,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -42,
+									"left": -306,
 									"top": -146,
 									"width": 10,
 									"height": 10
@@ -2230,9 +2231,9 @@
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 528,
+							"left": 264,
 							"top": 720,
-							"width": 345,
+							"width": 617,
 							"height": 185,
 							"nameCompartment": {
 								"$ref": "AAAAAAGBBeITsMbB+OM="
@@ -2271,7 +2272,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1264,
+									"left": 1267,
 									"top": 466,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2292,7 +2293,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1256,
+									"left": 1259,
 									"top": 453,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2313,7 +2314,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1281,
+									"left": 1284,
 									"top": 491,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -2334,7 +2335,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1222,
+									"left": 1226,
 									"top": 494,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -2355,7 +2356,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1217,
+									"left": 1221,
 									"top": 481,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -2376,7 +2377,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1233,
+									"left": 1237,
 									"top": 519,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -2397,7 +2398,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1308,
+									"left": 1310,
 									"top": 439,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -2417,7 +2418,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1298,
+									"left": 1300,
 									"top": 429,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -2437,7 +2438,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1326,
+									"left": 1328,
 									"top": 460,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -2483,7 +2484,7 @@
 								"$ref": "AAAAAAGBANwIn1BYN2U="
 							},
 							"lineStyle": 1,
-							"points": "1209:527;1338:444",
+							"points": "1213:527;1340:444",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGBCB4ZYU9yTQU="
@@ -2816,12 +2817,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCCtpC8y1RMk="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 533,
 											"top": 941,
 											"width": 327,
-											"height": 13,
-											"text": "«boundary»"
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -2831,7 +2832,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 533,
-											"top": 956,
+											"top": 943,
 											"width": 327,
 											"height": 13,
 											"text": "User Interface :: ListSellingClothesUI"
@@ -2868,7 +2869,7 @@
 									"left": 528,
 									"top": 936,
 									"width": 337,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCCtpC8y2aB0="
 									},
@@ -2893,7 +2894,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 528,
-									"top": 974,
+									"top": 961,
 									"width": 337,
 									"height": 10
 								},
@@ -2918,16 +2919,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 533,
-											"top": 989,
+											"top": 976,
 											"width": 327,
 											"height": 13,
-											"text": "+Show Selling Clothes List()",
+											"text": "+Show Selling Clothes List(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 528,
-									"top": 984,
+									"top": 971,
 									"width": 337,
 									"height": 23
 								},
@@ -3012,12 +3013,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCEcI8xGflb8="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 533,
 											"top": 1165,
 											"width": 327,
-											"height": 13,
-											"text": "«boundary»"
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -3027,7 +3028,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 533,
-											"top": 1180,
+											"top": 1167,
 											"width": 327,
 											"height": 13,
 											"text": "User Interface :: ListSoldoutClothesUI"
@@ -3064,7 +3065,7 @@
 									"left": 528,
 									"top": 1160,
 									"width": 337,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCEcI8xGgw0k="
 									},
@@ -3089,7 +3090,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 528,
-									"top": 1198,
+									"top": 1185,
 									"width": 337,
 									"height": 10
 								},
@@ -3114,16 +3115,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 533,
-											"top": 1213,
+											"top": 1200,
 											"width": 327,
 											"height": 13,
-											"text": "+show sold out list()",
+											"text": "+show sold out list(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 528,
-									"top": 1208,
+									"top": 1195,
 									"width": 337,
 									"height": 23
 								},
@@ -3208,12 +3209,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCEcj/xZ4VC0="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 533,
 											"top": 1341,
 											"width": 327,
-											"height": 13,
-											"text": "«boundary»"
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -3223,7 +3224,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 533,
-											"top": 1356,
+											"top": 1343,
 											"width": 327,
 											"height": 13,
 											"text": "User Interface :: PrintSoldStatisticsUI"
@@ -3260,7 +3261,7 @@
 									"left": 528,
 									"top": 1336,
 									"width": 337,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCEcj/xZ58DE="
 									},
@@ -3285,7 +3286,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 528,
-									"top": 1374,
+									"top": 1361,
 									"width": 337,
 									"height": 10
 								},
@@ -3310,16 +3311,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 533,
-											"top": 1389,
+											"top": 1376,
 											"width": 327,
 											"height": 13,
-											"text": "+print sold statistic()",
+											"text": "+print sold statistic(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 528,
-									"top": 1384,
+									"top": 1371,
 									"width": 337,
 									"height": 23
 								},
@@ -3404,12 +3405,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCEdELBtpk6w="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 949,
 											"top": 949,
 											"width": 295,
-											"height": 13,
-											"text": "«control»"
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -3419,7 +3420,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 949,
-											"top": 964,
+											"top": 951,
 											"width": 295,
 											"height": 13,
 											"text": "Control :: ListSellingClothes"
@@ -3456,7 +3457,7 @@
 									"left": 944,
 									"top": 944,
 									"width": 305,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCEdELBtqKBo="
 									},
@@ -3481,7 +3482,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 982,
+									"top": 969,
 									"width": 305,
 									"height": 10
 								},
@@ -3506,16 +3507,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 949,
-											"top": 997,
+											"top": 984,
 											"width": 295,
 											"height": 13,
-											"text": "+get Selling Clothes List()",
+											"text": "+get Selling Clothes List(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 992,
+									"top": 979,
 									"width": 305,
 									"height": 23
 								},
@@ -3600,12 +3601,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCEdZ8B3RFKs="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 949,
 											"top": 725,
-											"width": 295,
-											"height": 13,
-											"text": "«control»"
+											"width": 556.7529296875,
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -3615,8 +3616,8 @@
 											},
 											"font": "Arial;13;1",
 											"left": 949,
-											"top": 740,
-											"width": 295,
+											"top": 727,
+											"width": 570.38134765625,
 											"height": 13,
 											"text": "Controll :: RegisterSellingClothes"
 										},
@@ -3651,8 +3652,8 @@
 									"font": "Arial;13;0",
 									"left": 944,
 									"top": 720,
-									"width": 305,
-									"height": 38,
+									"width": 580.38134765625,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCEdZ8B3S6/w="
 									},
@@ -3677,8 +3678,8 @@
 									},
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 758,
-									"width": 305,
+									"top": 745,
+									"width": 580.38134765625,
 									"height": 10
 								},
 								{
@@ -3702,17 +3703,17 @@
 											},
 											"font": "Arial;13;0",
 											"left": 949,
-											"top": 773,
-											"width": 295,
+											"top": 760,
+											"width": 570.38134765625,
 											"height": 13,
-											"text": "+add selling clothes()",
+											"text": "+add selling clothes(clothesName: String, companyName: String, price: Integer, amount: Integer)",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 768,
-									"width": 305,
+									"top": 755,
+									"width": 580.38134765625,
 									"height": 23
 								},
 								{
@@ -3752,7 +3753,7 @@
 							"containerChangeable": true,
 							"left": 944,
 							"top": 720,
-							"width": 305,
+							"width": 580.38134765625,
 							"height": 177,
 							"nameCompartment": {
 								"$ref": "AAAAAAGBCEdZ8B3RFKs="
@@ -3796,12 +3797,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCEeJESiv0Qw="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 949,
 											"top": 1173,
 											"width": 303,
-											"height": 13,
-											"text": "«control»"
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -3811,7 +3812,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 949,
-											"top": 1188,
+											"top": 1175,
 											"width": 303,
 											"height": 13,
 											"text": "Control :: ListSoldoutClothes"
@@ -3848,7 +3849,7 @@
 									"left": 944,
 									"top": 1168,
 									"width": 313,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCEeJESiwicg="
 									},
@@ -3873,7 +3874,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 1206,
+									"top": 1193,
 									"width": 313,
 									"height": 10
 								},
@@ -3898,16 +3899,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 949,
-											"top": 1221,
+											"top": 1208,
 											"width": 303,
 											"height": 13,
-											"text": "+show sold out list()",
+											"text": "+show sold out list(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 1216,
+									"top": 1203,
 									"width": 313,
 									"height": 23
 								},
@@ -3992,12 +3993,12 @@
 											"_parent": {
 												"$ref": "AAAAAAGBCEeeMS30tdg="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 949,
 											"top": 1349,
 											"width": 303,
-											"height": 13,
-											"text": "«control»"
+											"height": 13
 										},
 										{
 											"_type": "LabelView",
@@ -4007,7 +4008,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 949,
-											"top": 1364,
+											"top": 1351,
 											"width": 303,
 											"height": 13,
 											"text": "Control :: printSoldStatistics"
@@ -4044,7 +4045,7 @@
 									"left": 944,
 									"top": 1344,
 									"width": 313,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGBCEeeMS31hvY="
 									},
@@ -4069,7 +4070,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 1382,
+									"top": 1369,
 									"width": 313,
 									"height": 10
 								},
@@ -4094,16 +4095,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 949,
-											"top": 1397,
+											"top": 1384,
 											"width": 303,
 											"height": 13,
-											"text": "+get selling statistic()",
+											"text": "+get selling statistic(): String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 944,
-									"top": 1392,
+									"top": 1379,
 									"width": 313,
 									"height": 23
 								},
@@ -4410,7 +4411,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBANUiVk9zbc8="
 							},
-							"name": "listSoldoutClothes"
+							"name": "listSoldoutClothes",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdTTLqrduvo=",
+									"_parent": {
+										"$ref": "AAAAAAGBANW1IU+Gq/Q="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -4489,7 +4504,7 @@
 							"name": "memberSoldClothes",
 							"visibility": "private",
 							"type": {
-								"$ref": "AAAAAAGBAN7LUlCiWH8="
+								"$ref": "AAAAAAGBHbJ7EiINsTw="
 							}
 						}
 					],
@@ -4746,7 +4761,7 @@
 							"name": "memberSellingClothes",
 							"visibility": "private",
 							"type": {
-								"$ref": "AAAAAAGBAPPdbqfbKxM="
+								"$ref": "AAAAAAGBHbJ7EiINsTw="
 							}
 						}
 					],
@@ -4852,7 +4867,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBAPh3hs6v8zM="
 							},
-							"name": "getSellingStatistics"
+							"name": "getSellingStatistics",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdVZhrFaVxY=",
+									"_parent": {
+										"$ref": "AAAAAAGBAPlQFNyn6BU="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -4863,9 +4892,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "User Interface :: RegisterSellingClothesUI",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3JPSA="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -4873,7 +4899,53 @@
 							"_parent": {
 								"$ref": "AAAAAAGBBdWnVrh1Si8="
 							},
-							"name": "add selling Clothes"
+							"name": "add selling Clothes",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdaH6L4feoM=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd4CfsSUBLc="
+									},
+									"name": "clothesName",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdaQcr6mu9s=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd4CfsSUBLc="
+									},
+									"name": "companyName",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdaXv78tUY8=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd4CfsSUBLc="
+									},
+									"name": "price",
+									"type": {
+										"$ref": "AAAAAAGBANmSE1A1n3o="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdafPb+0rPA=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd4CfsSUBLc="
+									},
+									"name": "amount",
+									"type": {
+										"$ref": "AAAAAAGBANmSE1A1n3o="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -4892,9 +4964,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Controll :: RegisterSellingClothes",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3GaTk="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -4902,7 +4971,53 @@
 							"_parent": {
 								"$ref": "AAAAAAGBBdXSDLjui/E="
 							},
-							"name": "add selling clothes"
+							"name": "add selling clothes",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdrdE9t9gcU=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd8NCsSk168="
+									},
+									"name": "clothesName",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdrmLdwogrs=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd8NCsSk168="
+									},
+									"name": "companyName",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdrt59zTJi4=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd8NCsSk168="
+									},
+									"name": "price",
+									"type": {
+										"$ref": "AAAAAAGBANmSE1A1n3o="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdr2S91+aWY=",
+									"_parent": {
+										"$ref": "AAAAAAGBBd8NCsSk168="
+									},
+									"name": "amount",
+									"type": {
+										"$ref": "AAAAAAGBANmSE1A1n3o="
+									}
+								}
+							]
 						}
 					]
 				},
@@ -4913,9 +5028,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "User Interface :: ListSellingClothesUI",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3JPSA="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -4923,7 +5035,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBCCcfta29R9U="
 							},
-							"name": "Show Selling Clothes List"
+							"name": "Show Selling Clothes List",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdgHYMpp3+Q=",
+									"_parent": {
+										"$ref": "AAAAAAGBCEhuxDxM0Zc="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -4934,9 +5060,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "User Interface :: ListSoldoutClothesUI",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3JPSA="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -4944,7 +5067,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBCDpfcOEUSxI="
 							},
-							"name": "show sold out list"
+							"name": "show sold out list",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdhR1cwr1xE=",
+									"_parent": {
+										"$ref": "AAAAAAGBCEjmhUYwGwc="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -4955,9 +5092,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "User Interface :: PrintSoldStatisticsUI",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3JPSA="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -4965,7 +5099,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBCDprs+HBAGY="
 							},
-							"name": "print sold statistic"
+							"name": "print sold statistic",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHdi4nc34BWU=",
+									"_parent": {
+										"$ref": "AAAAAAGBCElOp01z8V4="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -4976,9 +5124,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Control :: ListSellingClothes",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3GaTk="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -4986,7 +5131,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBCEU1yPObxvg="
 							},
-							"name": "get Selling Clothes List"
+							"name": "get Selling Clothes List",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHd3bU/CtCTg=",
+									"_parent": {
+										"$ref": "AAAAAAGBCEitXj/gJWg="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -4997,9 +5156,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Control :: ListSoldoutClothes",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3GaTk="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -5007,7 +5163,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBCEWJ3P2EIbo="
 							},
-							"name": "show sold out list"
+							"name": "show sold out list",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHd4TdfGi0Vw=",
+									"_parent": {
+										"$ref": "AAAAAAGBCEkavEp4UrA="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -5018,9 +5188,6 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Control :: printSoldStatistics",
-					"stereotype": {
-						"$ref": "AAAAAAGBBc7UGI3GaTk="
-					},
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -5028,7 +5195,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGBCEWgFP+mnpQ="
 							},
-							"name": "get selling statistic"
+							"name": "get selling statistic",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBHd90avL3n2E=",
+									"_parent": {
+										"$ref": "AAAAAAGBCEmIkFFe8FY="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGBANnMklA5WRc="
+									},
+									"direction": "return"
+								}
+							]
 						}
 					]
 				}
@@ -9814,8 +9995,8 @@
 												"$ref": "AAAAAAGBBbTh56wD06U="
 											},
 											"font": "Arial;13;0",
-											"left": 40.72998046875,
-											"top": 5,
+											"left": 88.72998046875,
+											"top": 61,
 											"width": 116.62255859375,
 											"height": 13,
 											"text": "List Soldout Clothes"
@@ -9827,17 +10008,18 @@
 												"$ref": "AAAAAAGBBbTh56wD06U="
 											},
 											"font": "Arial;13;1",
-											"left": 21,
-											"top": 5,
+											"left": 69,
+											"top": 61,
 											"width": 14.72998046875,
 											"height": 13,
 											"text": "sd"
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 16,
+									"left": 64,
+									"top": 56,
 									"width": 1169,
-									"height": 721,
+									"height": 609,
 									"nameLabel": {
 										"$ref": "AAAAAAGBBbTh56wEU5E="
 									},
@@ -14437,9 +14619,9 @@
 												"$ref": "AAAAAAGBBcTMAUIODlA="
 											},
 											"font": "Arial;13;0",
-											"left": 713.49462890625,
+											"left": 710.669921875,
 											"top": 257,
-											"width": 138.0107421875,
+											"width": 143.66015625,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -14829,10 +15011,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGBBb/HTT3BjA4="
 							},
-							"name": "Boundary1",
-							"stereotype": {
-								"$ref": "AAAAAAGBBc7UGI3JPSA="
-							}
+							"name": "Boundary1"
 						}
 					],
 					"messages": [
