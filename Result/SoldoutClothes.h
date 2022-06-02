@@ -1,8 +1,8 @@
 #ifndef SOLDOUTOUT_CLOTHES_H
 #define SOLDOUTOUT_CLOTHES_H
 #include <iostream>
-#include "./SoldoutClothesCollection.h"
-#include "..\Entity\SellingClothesCollection.h"
+#include "SoldoutClothesCollection.h"
+#include "SellingClothesCollection.h"
 
 class SoldoutClothes
 {

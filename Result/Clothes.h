@@ -13,42 +13,39 @@ private:
     int amount;
     int price;
     string sellerID;
+    int numEvaluation = 0;
+    float satisfaction = 0;
+
 public:
     int sellingNum = 1;
-    int satisfaction = 0; // 일단 이렇게 해놓음
+
     Clothes(){
-        clothesName = '.';
-        clothesCompanyName = '.';
+        clothesName = "";
+        clothesCompanyName = "";
         amount = 0;
         price = 0;
-        sellerID = '.';
+        sellerID = "";
     }
-    Clothes(string clothesName, string clothesCompanyName, int price, int amount){
+    Clothes(string clothesName, string clothesCompanyName, int price, int amount, string userID){
         this->clothesName = clothesName;
         this->clothesCompanyName = clothesCompanyName;
         this->price = price;
         this->amount = amount;
-        cout << "create"<< endl;
+        this->sellerID = userID;
     }
     void setSellerID(string sellerID){this->sellerID =sellerID;};
-    void setClothesSatisfaction(int satisfaction){this->satisfaction = satisfaction;};
+    void setClothesSatisfaction(float satisfaction){this->satisfaction = satisfaction;};
     string getSellerID(){return this->sellerID;};
     int getamount(){return this->amount;};
     int getPrice(){return this->price;};
     string getClothesName(){return this->clothesName;};
-    int getSatisfaction(){return this->satisfaction;};
+    float getSatisfaction(){return this->satisfaction;};
+    string getCompanyName() { return this->clothesCompanyName; };
     string getClothesDetail();
-    ~Clothes(){
-        cout << "delete" << endl;
-    }
+    float satisfactionEvaluate(int num);
+    string itemSpecific();
+
+   ~Clothes(){}
 };
-
-string Clothes::getClothesDetail(){
-    string detail;
-    detail = this->clothesName + " " + this->clothesCompanyName + " " + to_string(this->price) + " " + to_string(this->amount);
-    return detail;
-}
-
-
 
 #endif

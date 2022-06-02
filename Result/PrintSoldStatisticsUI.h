@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "../Control/PrintSoldStatistics.h"
+#include "PrintSoldStatistics.h"
 
 
 using namespace std;

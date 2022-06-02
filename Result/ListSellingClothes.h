@@ -1,7 +1,7 @@
 #ifndef LIST_SELLING_CLOTHES_H
 #define LIST_SELLING_CLOTHES_H
 #include <iostream>
-#include "..\Entity\SellingClothes.h"
+#include "SellingClothes.h"
 
 using namespace std;
 

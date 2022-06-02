@@ -3,8 +3,9 @@
 #include <iostream>
 #include <string>
 
-#include "../Control/RegisterSellingClothes.h"
-#include "../Entity/SellingClothesCollection.h"
+#include "RegisterSellingClothes.h"
+#include "SellingClothesCollection.h"
+
 
 using namespace std;
 

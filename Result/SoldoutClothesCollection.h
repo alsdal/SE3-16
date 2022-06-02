@@ -3,8 +3,8 @@
 #include <iostream>
 #define MAX_NUMBER_OF_CLOTEHS  3
 
-#include "./Clothes.h"
-#include "..\Entity\SellingClothesCollection.h"
+#include "Clothes.h"
+#include "SellingClothesCollection.h"
 
 class SoldoutClothesCollection
 {

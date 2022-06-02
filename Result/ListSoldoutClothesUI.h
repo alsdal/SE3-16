@@ -1,8 +1,8 @@
 #ifndef LIST_SOLDOUT_CLOTHES_UI_H
 #define LIST_SOLDOUT_CLOTHES_UI_H
 #include <iostream>
-#include "..\Control\ListSoldoutClothes.h"
-#include "..\Entity\SellingClothesCollection.h"
+#include "ListSoldoutClothes.h"
+#include "SellingClothesCollection.h"
 
 using namespace std;
 

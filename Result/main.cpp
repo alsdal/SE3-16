@@ -12,14 +12,14 @@ using namespace std;
 #include "MemberList.h"
 #include "LogoutUI.h"
 #include "WithdrawUI.h"
-#include "./Boundary/RegisterSellingClothesUI.h"
-#include "./Boundary/ListSellingClothesUI.h"
-#include "./Boundary/ListSoldoutClothesUI.h"
-#include "./Boundary/PrintSoldStatisticsUI.h"
-#include "./Entity/SellingClothesCollection.h"
-#include "ItemSearch.h"
-#include "ItemPurchase.h"
-#include "ItemPurchaseListView.h"
+#include "RegisterSellingClothesUI.h"
+#include "ListSellingClothesUI.h"
+#include "ListSoldoutClothesUI.h"
+#include "PrintSoldStatisticsUI.h"
+#include "SellingClothesCollection.h"
+#include "ItemSearchUI.h"
+#include "ItemPurchaseUI.h"
+#include "ItemPurchaseListViewUI.h"
 
 // 상수 선언
 #define MAX_STRING 32
@@ -47,14 +47,15 @@ RegisterSellingClothesUI registerSellingClothesUI;
 ListSellingClothesUI listSellingClothesUI;
 ListSoldoutClothesUI l1stSoldoutClothesUI;
 PrintSoldStatisticsUI printSoldStatisticsUI;
-ItemPurchaseListView purchaseListView;
+ItemPurchaseListViewUI purchaseListView_UI;
 ItemPurchaseList purchaseList;
-ItemPurchase itempurchase;
-ItemSearch itemsearch;
+ItemPurchaseUI itempurchase_UI;
+ItemSearchUI itemsearch_UI;
 
 // 변수 선언
 ifstream readFile;
 ofstream writeFile;
+string clothname;
 string userID = "NULL";
 int num = 0;
 int numMem = 0;
@@ -167,44 +168,44 @@ void doTask()
 			{
 				case 1:
 				{
+					// 상품정보 검색
 					// 상품명 입력
+
 					writeFile << "4.1. 상품 정보 검색\n";
 					readFile >> clothname;
-					// 상품정보 검색
-					ItemSearch itemsearch;
-					writeFile << "> " << itemsearch.searchItem(sellingClothesCollection, clothname) << endl;
+
+					writeFile << "> " << itemsearch_UI.inputItemName(sellingClothesCollection, clothname) << endl;
 
 					break;
-
 				}
 				case 2:
 				{
 					// 상품 구매
-					printf("4.2\n");
+					
 					writeFile << "4.2. 상품 구매\n";
-					writeFile << "> " << itempurchase.purchaseItem(&purchaseList, sellingClothesCollection, clothname) << endl;
+					writeFile << "> " << itempurchase_UI.selectPurchase(&purchaseList, sellingClothesCollection, clothname) << endl;
 
 					break;
 				}
 				case 3:
 				{
 					// 상품 구매 내역 조회
-					printf("4.3\n");
+					
 					writeFile << "4.3. 상품 구매 내역 조회\n";
-					writeFile << "> " << purchaseListView.checkPurchaseList(&purchaseList) << endl;
+					writeFile << "> " << purchaseListView_UI.selectPurchaseList(&purchaseList) << endl;
 
 					break;
 				}
 				case 4:
 				{
 					// 상품 구매만족도 평가
-					// 구매만족도 입력
+						// 구매만족도 입력
 					int evaluation = 0;
-					printf("4.4\n");
+					
 					writeFile << "4.4 상품 구매만족도 평가\n";
 					readFile >> evaluation;
 
-					writeFile << purchaseListView.checkSatisfaction(&purchaseList, sellingClothesCollection, clothname, evaluation);
+					writeFile << purchaseListView_UI.inputSatisfaction(&purchaseList, sellingClothesCollection, clothname, evaluation) << endl;
 
 					break;
 				}
@@ -344,5 +345,6 @@ void printStatistics(){
 
 void program_exit()
 {
+	writeFile << "6.1 종료" << endl;
 	return;
 }

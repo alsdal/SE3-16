@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "./SellingClothesCollection.h"
+#include "SellingClothesCollection.h"
 
 
 using namespace std;
@@ -22,10 +22,10 @@ string SellingStatistics::getSellingStatistics(SellingClothesCollection sellingC
     for(int i =0; i< sellingClothesCollection.clothesNum; i++){
         int sum = 0, avgSatisfaction = 0;
         int price = sellingClothesCollection.memberSellingClothes[i]->getPrice();
-        int sellingAmount = sellingClothesCollection.memberSellingClothes[i]->sellingNum; //이번엔 무조건 1개만으로 가정함
+        int sellingAmount = sellingClothesCollection.memberSellingClothes[i]->sellingNum; 
         string clothesName = sellingClothesCollection.memberSellingClothes[i]->getClothesName();
         sum += price * sellingAmount;
-        avgSatisfaction+= sellingClothesCollection.memberSellingClothes[i]->getSatisfaction(); //이번엔 평균 구매만족도도 1개
+        avgSatisfaction+= sellingClothesCollection.memberSellingClothes[i]->getSatisfaction(); 
         str +=  (clothesName + ' ' + to_string(sum) + ' ' + to_string(avgSatisfaction) + '\n');
     }
     return str;

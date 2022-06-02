@@ -1,7 +1,7 @@
 #ifndef REGISTER_SELLING_CLOTHES_H
 #define REGISTER_SELLING_CLOTHES_H
 #include <iostream>
-#include "../Entity/SellingClothesCollection.h"
+#include "SellingClothesCollection.h"
 using namespace std;
 
 class RegisterSellingClothes
