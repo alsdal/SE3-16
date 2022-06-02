@@ -6,9 +6,12 @@
 #include <string>
 using namespace std;
 
-#include "./RegisterUI.h"
-#include "./Register.h"
-#include "./LoginUI.h"
+#include "RegisterUI.h"
+#include "Register.h"
+#include "LoginUI.h"
+#include "MemberList.h"
+#include "LogoutUI.h"
+#include "WithdrawUI.h"
 #include "./Boundary/RegisterSellingClothesUI.h"
 #include "./Boundary/ListSellingClothesUI.h"
 #include "./Boundary/ListSoldoutClothesUI.h"
@@ -34,9 +37,11 @@ void listing();
 void listingSoldout();
 void printStatistics();
 void program_exit();
-MemberList memberList;
-RegisterUI registerUI;
+MemberList memberListMain;
+RegisterUI registerUI;	
 LoginUI loginUI;
+LogoutUI logoutUI;
+WithdrawUI withdrawUI;
 SellingClothesCollection sellingClothesCollection;
 RegisterSellingClothesUI registerSellingClothesUI;
 ListSellingClothesUI listSellingClothesUI;
@@ -52,6 +57,7 @@ ifstream readFile;
 ofstream writeFile;
 string userID = "NULL";
 int num = 0;
+int numMem = 0;
 bool Log = false;
 
 int main() 
@@ -108,6 +114,7 @@ void doTask()
 				break;
 			}
 			}
+			break;
 		}
 		case 2:
 		{
@@ -124,6 +131,8 @@ void doTask()
 				break;
 			}
 			}
+			break;
+
 		}
 		case 3:
             {
@@ -245,41 +254,55 @@ void registerMem()
 {
 	char name[MAX_STRING], regNum[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
 	readFile >> name >> regNum >> ID >> password;
-	memberList.memberList[num++] = registerUI.enterInfo(name,regNum,ID,password);
-
+	memberListMain.memberList[numMem++] = registerUI.enterInfo(name, regNum, ID, password);
+	memberListMain.memberNum++;
 	writeFile << "1.1 회원가입" << endl;
 	writeFile << "> " << name << " " << regNum << " " << ID << " " << password << endl;
 
-	return;
 }
 
 void withdrawMem()
 {
-	writeFile << "1.2 회원탈퇴" << endl;
-	writeFile << "> ";
+	if (userID != "NULL") {
+		writeFile << "1.2 회원탈퇴" << endl;
+		writeFile << "> " << withdrawUI.withdraw(userID, memberListMain) << endl;
+		memberListMain.deleteMember(userID, memberListMain);
 
-	return;
+		userID = "NULL";
+	}
+	else {
+		writeFile << "1.2 회원탈퇴" << endl;
+		writeFile << "> 로그인 해주세요" << endl;
+	}
 }
-void loginMem(){
+
+void loginMem() {
 	char ID[MAX_STRING], password[MAX_STRING];
 	readFile >> ID >> password;
 
-	Log = loginUI.login(ID, password);
-	userID = ID;
-
-	writeFile << "2.1 로그인" << endl;
-	writeFile << "> ";
-
-
-	return;
+	if (loginUI.login(ID, password, memberListMain) == true) {
+		writeFile << "2.1 로그인" << endl;
+		writeFile << "> " << ID << " " << password << endl;
+		userID = ID;
+	}
+	else {
+		writeFile << "2.1 로그인" << endl;
+		writeFile << "> 실패" << endl;
+	}
 }
 
 void logoutMem() {
-	writeFile << "2.2 로그아웃" << endl;
-	writeFile << "> ";
-
-	return;
+	if (userID != "NULL") {
+		writeFile << "2.2 로그아웃" << endl;
+		writeFile << "> " << logoutUI.logout(userID, memberListMain) << endl;
+		userID = "NULL";
+	}
+	else {
+		writeFile << "2.2 로그아웃" << endl;
+		writeFile << "> 로그인 해주세요" << endl;
+	}
 }
+
 
 //유저 아이디 넣는거 해야할듯
 void regist(){
