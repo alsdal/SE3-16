@@ -6,8 +6,9 @@
 
 using namespace std;
 
-// 등록된 item중에서 이름과 맞는 item을 찾기
-// item을 찾은 후 상세내용 호출
+// Description: 판매목록 item중에서 이름이 맞는 item을 찾기
+//              item을 찾은 후 상세내용 호출
+// Parameters: cloth - 판매목록, name - 아이템 이름
 string ItemSearch::searchItem(SellingClothesCollection cloth, string name)
 {
 	string detail = "";

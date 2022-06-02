@@ -2128,7 +2128,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGAu3fcm/8Zfl4="
 											},
-											"name": "상품 정보 검색",
+											"name": "ItemSearch",
 											"ownedViews": [
 												{
 													"_type": "UMLFrameView",
@@ -2149,9 +2149,9 @@
 															"font": "Arial;13;0",
 															"left": 24.72998046875,
 															"top": 5,
-															"width": 86.2236328125,
+															"width": 67.47265625,
 															"height": 13,
-															"text": "상품 정보 검색"
+															"text": "ItemSearch"
 														},
 														{
 															"_type": "LabelView",
@@ -5730,7 +5730,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGAvDWJSt3l7AA="
 											},
-											"name": "상품 구매",
+											"name": "Item Purchase",
 											"ownedViews": [
 												{
 													"_type": "UMLFrameView",
@@ -5751,9 +5751,9 @@
 															"font": "Arial;13;0",
 															"left": 24.72998046875,
 															"top": 5,
-															"width": 56.61181640625,
+															"width": 84.814453125,
 															"height": 13,
-															"text": "상품 구매"
+															"text": "Item Purchase"
 														},
 														{
 															"_type": "LabelView",
@@ -8376,7 +8376,7 @@
 																	"font": "Arial;13;0",
 																	"left": -480,
 																	"top": 320,
-																	"width": 106.20263671875,
+																	"width": 110.24609375,
 																	"height": 13,
 																	"text": "(from Interaction1)"
 																},
@@ -8678,9 +8678,9 @@
 																"$ref": "AAAAAAGBI9r2u39Ew3Y="
 															},
 															"font": "Arial;13;0",
-															"left": 330.13916015625,
+															"left": 329.577392578125,
 															"top": 350.5,
-															"width": 86.7216796875,
+															"width": 87.84521484375,
 															"height": 13,
 															"alpha": -0.0196053270140079,
 															"distance": 51.0098029794274,
@@ -9213,7 +9213,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGAvDcOQ9/hy9s="
 											},
-											"name": "상품 구매 내역 조회",
+											"name": "Item Purchase List View",
 											"ownedViews": [
 												{
 													"_type": "UMLFrameView",
@@ -9234,9 +9234,9 @@
 															"font": "Arial;13;0",
 															"left": 24.72998046875,
 															"top": 5,
-															"width": 115.83544921875,
+															"width": 140.21044921875,
 															"height": 13,
-															"text": "상품 구매 내역 조회"
+															"text": "Item Purchase List View"
 														},
 														{
 															"_type": "LabelView",
@@ -13945,7 +13945,7 @@
 																	"font": "Arial;13;0",
 																	"left": -16,
 																	"top": 80,
-																	"width": 106.20263671875,
+																	"width": 110.24609375,
 																	"height": 13,
 																	"text": "(from Interaction1)"
 																},
@@ -15955,7 +15955,7 @@
 											"font": "Arial;13;0",
 											"left": 656,
 											"top": -16,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -17124,7 +17124,7 @@
 											"font": "Arial;13;0",
 											"left": 759,
 											"top": -61,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -20757,7 +20757,7 @@
 											"font": "Arial;13;0",
 											"left": 290,
 											"top": 518,
-											"width": 80.9072265625,
+											"width": 85.0966796875,
 											"height": 13,
 											"text": "(from Model1)"
 										},
@@ -20988,9 +20988,9 @@
 										"$ref": "AAAAAAGBI+g1y6/d2r4="
 									},
 									"font": "Arial;13;0",
-									"left": 627,
+									"left": 625,
 									"top": 1081,
-									"width": 71.89990234375,
+									"width": 74.66748046875,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -21053,9 +21053,9 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 572,
+									"left": 571,
 									"top": 1114,
-									"width": 14.82177734375,
+									"width": 16.26904296875,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -21263,9 +21263,9 @@
 										"$ref": "AAAAAAGBI+hEOLCDC+o="
 									},
 									"font": "Arial;13;0",
-									"left": 640,
+									"left": 638,
 									"top": 887,
-									"width": 71.89990234375,
+									"width": 74.66748046875,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
