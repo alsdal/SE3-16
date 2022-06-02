@@ -1,10 +1,10 @@
 #pragma once
-
 #include <iostream>
+#include "MemberList.h"
 using namespace std;
 
-#include "MemberList.h"
-
+// Class : Withdraw
+// Description : È¸¿øÅ»Åð Å¬·¡½º
 
 class Withdraw
 {

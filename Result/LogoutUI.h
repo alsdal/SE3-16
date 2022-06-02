@@ -1,9 +1,9 @@
 #pragma once
-
+#include "Logout.h"
 using namespace std;
 
-#include "Logout.h"
-
+// Class : LogoutUI
+// Description : 회원 로그아웃 UI 클래스
 class LogoutUI
 {
 private:

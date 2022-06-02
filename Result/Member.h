@@ -1,8 +1,9 @@
 #pragma once
-
 #include <iostream>
 using namespace std;
 
+// Class : Member
+// Description : 회원 클래스
 class Member
 {
 private:

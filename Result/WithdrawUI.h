@@ -1,8 +1,9 @@
 #pragma once
-
+#include "Withdraw.h"
 using namespace std;
 
-#include "Withdraw.h"
+// Class : WithdrawUI
+// Description : È¸¿øÅ»Åð UI Å¬·¡½º
 
 class WithdrawUI
 {

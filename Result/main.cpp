@@ -104,12 +104,14 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1:		// 1.1 회원가입
+			// 1.1 회원가입
+			case 1:		
 			{
 				registerMem();
 				break;
 			}
-			case 2:		// 1.2 회원탈퇴
+			// 1.2 회원탈퇴
+			case 2:		
 			{
 				withdrawMem();
 				break;
@@ -121,12 +123,14 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1:		// 2.1 로그인
+			// 2.1 로그인
+			case 1:		
 			{
 				loginMem();
 				break;
 			}
-			case 2:		// 2.2 로그아웃
+			// 2.2 로그아웃
+			case 2:		
 			{
 				logoutMem();
 				break;
@@ -304,8 +308,6 @@ void logoutMem() {
 	}
 }
 
-
-//유저 아이디 넣는거 해야할듯
 void regist(){
     string clothesName, companyName;
     int price, amount;

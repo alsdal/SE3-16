@@ -1,10 +1,11 @@
 #pragma once
-
 #include <iostream>
+#include "Register.h"
 using namespace std;
 
-#include "Register.h"
 
+// Class : RegisterUI
+// Description : 회원가입 UI 클래스
 class RegisterUI
 {
 private:

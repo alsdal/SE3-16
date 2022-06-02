@@ -16,12 +16,17 @@ Member::Member(string memberName, string memberRegNumber, string memberID, strin
 	this->memberPassword = memberPassword;
 };
 
-
+// Function : getMemberID()
+// Description: 회원 아이디 불러오기
+// Return Value : 회원 아이디
 string Member::getMemberID()
 {
 	return this->memberID;
 }
 
+// Function : getMemberPW()
+// Description: 회원 비밀번호 불러오기
+// Return Value : 회원 비밀번호
 string Member::getMemberPW()
 {
 	return this->memberPassword;

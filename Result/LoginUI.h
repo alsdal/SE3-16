@@ -1,9 +1,9 @@
 #pragma once
-
+#include "Login.h"
 using namespace std;
 
-#include "Login.h"
-
+// Class : LoginUI
+// Description : 회원 로그인 UI 클래스
 class LoginUI
 {
 private:

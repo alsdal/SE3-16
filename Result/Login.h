@@ -1,11 +1,11 @@
 #pragma once
-
 #include <iostream>
+#include "MemberList.h"
 using namespace std;
 
-#include "MemberList.h"
 
-
+// Class : Login
+// Description : 회원 로그인 클래스
 class Login
 {
 private:
