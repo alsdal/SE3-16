@@ -10,5 +10,5 @@ private:
 	Login loginMember;
 public:
 	LoginUI();
-	bool login(string memberID, string memberPassword);
+	bool login(string memberID, string memberPassword,MemberList memberListMain);
 };
