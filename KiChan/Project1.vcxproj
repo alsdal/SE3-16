@@ -140,24 +140,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Clothes.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="ItemCollection.h" />
     <ClInclude Include="ItemPurchaseList.h" />
     <ClInclude Include="ItemPurchase.h" />
     <ClInclude Include="ItemPurchaseListView.h" />
+    <ClInclude Include="ItemPurchaseListViewUI.h" />
+    <ClInclude Include="ItemPurchaseUI.h" />
     <ClInclude Include="ItemSearch.h" />
+    <ClInclude Include="ItemSearchUI.h" />
     <ClInclude Include="RegisterSellingClothes.h" />
     <ClInclude Include="RegisterSellingClothesUI.h" />
     <ClInclude Include="SellingClothesCollection.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Clothes.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="ItemCollection.cpp" />
     <ClCompile Include="ItemPurchase.cpp" />
     <ClCompile Include="ItemPurchaseList.cpp" />
     <ClCompile Include="ItemPurchaseListView.cpp" />
+    <ClCompile Include="ItemPurchaseListViewUI.cpp" />
+    <ClCompile Include="ItemPurchaseUI.cpp" />
     <ClCompile Include="ItemSearch.cpp" />
+    <ClCompile Include="ItemSearchUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SellingClothesCollection.cpp" />
   </ItemGroup>

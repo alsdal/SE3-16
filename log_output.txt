@@ -1,0 +1,19 @@
+[Meltyy] Mon May 16 20:01:05 2022 +0900 Merge branch 'kichan_branch' 42db553
+[Meltyy] Mon May 16 20:00:48 2022 +0900 buyer의 class, communication diagram 구현 버전3 d50a24d
+[alsdal] Mon May 16 19:55:02 2022 +0900 과제2 Member Class + Communication Diagram 5ce04e0
+[alsdal] Mon May 16 19:49:49 2022 +0900 과제2 Member Class Diagram d418137
+[alsdal] Mon May 16 19:46:53 2022 +0900 과제2 Member Commumication Diagram 93ca69f
+[Meltyy] Mon May 16 18:12:56 2022 +0900 Merge branch 'kichan_branch' 502cd9d
+[Meltyy] Mon May 16 18:12:40 2022 +0900 buyer의 class, communication diagram 구현 버전2 9b2f22b
+[alsdal] Sun May 15 19:12:14 2022 +0900 과제2 Member Usecase 0f01daa
+[Meltyy] Fri May 13 19:45:22 2022 +0900 Merge branch 'kichan_branch' 96e3e76
+[Meltyy] Fri May 13 19:45:09 2022 +0900 buyer의 class diagram 구현 버전 bf01711
+[Meltyy] Wed May 11 18:05:59 2022 +0900 Merge branch 'kichan_branch' a37a203
+[Meltyy] Wed May 11 18:05:45 2022 +0900 과제2 구매자 usecase 2bb6d70
+[Meltyy] Sun May 1 13:12:56 2022 +0900 김기찬 usecase description e5071b5
+[alsdal] Sat Apr 30 15:37:50 2022 +0900 Member UI Design & Usecase description a7a230f
+[alsdal] Fri Apr 29 21:45:27 2022 +0900 석찬 구현 완료 버전 4e048fe
+[Meltyy] Fri Apr 29 17:01:57 2022 +0900 김기찬 usecase diagram 구현 완료 버젼 32d09c6
+[Kim KiChan] Fri Apr 29 16:28:53 2022 +0900 김기찬 usecase diagram 구현 완료 버젼 532f8a6
+[Kim KiChan] Wed Apr 27 19:01:20 2022 +0900 팀원1 usecase 1차 버전 b6e8504
+[Meltyy] Sun Apr 24 16:47:43 2022 +0900 first commit 13110ec

@@ -17,6 +17,7 @@ public:
 	ItemPurchaseList(): purchase_num(0){}
 
 	void addItem(Clothes *cloth);
+	void setSatisfaction(int num);
 	string callPurchaseList();
 	string viewPurchaseSatisfaction(SellingClothesCollection sellingClothesCollection, string name, int num);
 

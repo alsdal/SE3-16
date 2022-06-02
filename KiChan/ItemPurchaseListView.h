@@ -7,6 +7,7 @@
 class ItemPurchaseListView
 {
 private:
+
 public:
 	string checkPurchaseList(ItemPurchaseList* purchaseList);
 	string checkSatisfaction(ItemPurchaseList* purchaseList, SellingClothesCollection sellingClothesCollection, string name, int num);

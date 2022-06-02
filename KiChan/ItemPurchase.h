@@ -10,5 +10,4 @@ private:
 
 public:
 	string purchaseItem(ItemPurchaseList* item_list, SellingClothesCollection cloth, string itemname);
-
 };

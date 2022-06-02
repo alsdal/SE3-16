@@ -13,9 +13,9 @@ string ItemSearch::searchItem(SellingClothesCollection cloth, string name)
 	string detail = "";
 	for (int i = 0; i < 3; i++)
 	{
-		if (name == cloth.memberSellingClothes[i]->getClothesName())
+		if (name == cloth.memberSellingClothes[i] -> getClothesName())
 		{
-			detail = cloth.memberSellingClothes[i]->itemSpecific();
+			detail = cloth.memberSellingClothes[i] -> itemSpecific();
 			
 			return detail;
 		}

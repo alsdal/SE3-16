@@ -17,7 +17,7 @@ float Clothes::satisfactionEvaluate(int num)
 
 string Clothes::getClothesDetail() {
 	string detail;
-	detail = this->clothesName + " " + this->clothesCompanyName + " " + to_string(this->price) + " " + to_string(this->amount);
+	detail = this -> clothesName + " " + this -> clothesCompanyName + " " + to_string(this -> price) + " " + to_string(this -> amount);
 	return detail;
 }
 

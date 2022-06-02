@@ -5,8 +5,8 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
-#include "ItemSearch.h"
-#include "ItemPurchase.h"
+#include "ItemSearchUI.h"
+#include "ItemPurchaseUI.h"
 #include "ItemPurchaseListView.h"
 #include "SellingClothesCollection.h"
 #include "RegisterSellingClothesUI.h"
@@ -30,8 +30,8 @@ SellingClothesCollection sellingClothesCollection;
 RegisterSellingClothesUI registerSellingClothesUI;
 ItemPurchaseListView purchaseListView;
 ItemPurchaseList purchaseList;
-ItemPurchase itempurchase;
-ItemSearch itemsearch;
+ItemPurchaseUI itempurchase_UI;
+ItemSearchUI itemsearch_UI;
 
 int num = 0;
 
@@ -134,7 +134,7 @@ void doTask()
 						writeFile << "4.1. 상품 정보 검색\n";
 						readFile >> clothname;
 
-						writeFile << "> " << itemsearch.searchItem(sellingClothesCollection, clothname) << endl;
+						writeFile << "> " << itemsearch_UI.inputItemName(sellingClothesCollection, clothname) << endl;
 
 						break;
 
@@ -144,7 +144,7 @@ void doTask()
 						// 상품 구매
 						printf("4.2\n");
 						writeFile << "4.2. 상품 구매\n";
-						writeFile << "> " << itempurchase.purchaseItem(&purchaseList, sellingClothesCollection, clothname) << endl;
+						writeFile << "> " << itempurchase_UI.selectPurchase(&purchaseList, sellingClothesCollection, clothname) << endl;
 						
 						
 						break;

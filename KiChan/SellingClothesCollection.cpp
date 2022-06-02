@@ -2,7 +2,7 @@
 
 Clothes* SellingClothesCollection::addNewClothesMember(string clothesName, string clothesCompanyName, int price, int amount, string SellerID) {
     memberSellingClothes[0] = new Clothes(clothesName, clothesCompanyName, price, amount, SellerID);
-    memberSellingClothes[0]->setSellerID(SellerID);
+    memberSellingClothes[0] -> setSellerID(SellerID);
     return  memberSellingClothes[0];
 }
 
