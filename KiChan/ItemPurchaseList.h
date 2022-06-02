@@ -1,0 +1,24 @@
+#pragma once
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include "SellingClothesCollection.h"
+
+using namespace std;
+
+class ItemPurchaseList
+{
+private:
+	Clothes* purchasedItem[10];
+	int satisfaction[10] = {0, };
+	int purchase_num;
+
+public:
+	ItemPurchaseList(): purchase_num(0){}
+
+	void addItem(Clothes *cloth);
+	string callPurchaseList();
+	string viewPurchaseSatisfaction(ItemPurchaseList* item_list, SellingClothesCollection sellingClothesCollection, string name, int num);
+
+	~ItemPurchaseList() {};
+};
