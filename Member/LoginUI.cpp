@@ -7,7 +7,7 @@ LoginUI::LoginUI()
 {
 }
 
-bool LoginUI::login(string memberID, string memberPassword)
+bool LoginUI::login(string memberID, string memberPassword, MemberList memberListMain)
 {
-	return loginMember.loginMember(memberID, memberPassword);
+	return loginMember.loginMember(memberID, memberPassword, memberListMain);
 }

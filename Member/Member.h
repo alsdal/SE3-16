@@ -13,8 +13,6 @@ private:
 public:
 	Member();
 	Member(string memberName, string memberRegNumber, string memberID, string memberPassword);
-	void createMember(string memberName, string memberRegNumber, string memberID, string memberPassword);
-	string getMember();
-	void deleteMember();
-	void logoutMember();
+	string getMemberID();
+	string getMemberPW();
 };
