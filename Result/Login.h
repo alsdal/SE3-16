@@ -12,6 +12,6 @@ private:
 	MemberList memberList;
 public:
 	Login();
-	bool loginMember(string memberID, string memberPassword);
+	bool loginMember(string memberID, string memberPassword, MemberList memberListMain);
 };
 

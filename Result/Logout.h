@@ -6,12 +6,12 @@ using namespace std;
 #include "MemberList.h"
 
 
-class Login
+class Logout
 {
 private:
 	MemberList memberList;
 public:
-	Login();
-	bool loginMember(string memberID, string memberPassword, MemberList memberListMain);
+	Logout();
+	string logoutMember(string memberID, MemberList memberListMain);
 };
 

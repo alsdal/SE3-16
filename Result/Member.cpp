@@ -16,22 +16,13 @@ Member::Member(string memberName, string memberRegNumber, string memberID, strin
 	this->memberPassword = memberPassword;
 };
 
-void Member::createMember(string memberName, string memberRegNumber, string memberID, string memberPassword)
-{
 
+string Member::getMemberID()
+{
+	return this->memberID;
 }
 
-string Member::getMember()
+string Member::getMemberPW()
 {
-	return this->memberName;
-}
-
-void Member::deleteMember()
-{
-	return;
-}
-
-void Member::logoutMember()
-{
-	return;
+	return this->memberPassword;
 }
