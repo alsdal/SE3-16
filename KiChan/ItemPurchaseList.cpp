@@ -5,7 +5,6 @@
 void ItemPurchaseList::addItem(Clothes* cloth)
 {
 	purchasedItem[purchase_num++] = cloth;
-	purchasedItem[0]->itemSpecific();
 }
 
 
@@ -13,33 +12,36 @@ void ItemPurchaseList::addItem(Clothes* cloth)
 string ItemPurchaseList::callPurchaseList()
 {
 	string detail = "";
-	for (int i = 0; i < purchase_num; i++)
-	{
-		detail = this->purchasedItem[i]->itemSpecific();
-		detail += detail;
-	}
-	return detail;
-}
-
-// SellingClothesCollection의 cloth의 evaluation값 변경
-string ItemPurchaseList::viewPurchaseSatisfaction(ItemPurchaseList* item_list, SellingClothesCollection sellingClothesCollection, string name, int num)
-{
-	int satisfaction = 0;
 	string output = "";
 	for (int i = 0; i < purchase_num; i++)
 	{
-		if (name == purchasedItem[purchase_num]->getClothesName())
+		detail = this->purchasedItem[i]->itemSpecific();
+		output += detail;
+	}
+	return output;
+}
+
+// SellingClothesCollection의 cloth의 evaluation값 변경
+string ItemPurchaseList::viewPurchaseSatisfaction( SellingClothesCollection sellingClothesCollection, string name, int num)
+{
+	int average_satisfaction;
+	string output = "";
+	// 구매 목록에서 구매만족도 입력후 아이템 내용 출력
+	for (int i = 0; i < purchase_num; i++)
+	{
+		if (name == purchasedItem[i]->getClothesName())
 		{
-			this -> satisfaction[purchase_num] = num;
+			this -> satisfaction[i] = num;
+			output = purchasedItem[i]->getSellerID() + " " + purchasedItem[i]->getClothesName() + " " + to_string(num);
 		}
 	}
+	// 판매목록에서 판매 물품의 평균구매만족도  업데이트
 	for (int j = 0; j < 3; j++)
 	{
 		if (name == sellingClothesCollection.memberSellingClothes[j]->getClothesName())
 		{
-			satisfaction = sellingClothesCollection.memberSellingClothes[j]->satisfactionEvaluate(num);
-			output = sellingClothesCollection.memberSellingClothes[j]->getSellerID() + " " + sellingClothesCollection.memberSellingClothes[j]->getClothesName() + " " 
-				+ to_string(sellingClothesCollection.memberSellingClothes[j]->getSatisfaction());
+			average_satisfaction = sellingClothesCollection.memberSellingClothes[j]->satisfactionEvaluate(num);
+			break;
 		}
 	}
 	

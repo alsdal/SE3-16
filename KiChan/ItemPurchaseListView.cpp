@@ -10,5 +10,5 @@ string ItemPurchaseListView::checkPurchaseList(ItemPurchaseList* purchaseList)
 
 string ItemPurchaseListView::checkSatisfaction(ItemPurchaseList* purchaseList, SellingClothesCollection sellingClothesCollection, string name, int num)
 {
-	return purchaseList->viewPurchaseSatisfaction(purchaseList, sellingClothesCollection, name, num);
+	return purchaseList->viewPurchaseSatisfaction(sellingClothesCollection, name, num);
 }

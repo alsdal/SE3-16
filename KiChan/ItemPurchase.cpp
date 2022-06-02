@@ -17,10 +17,12 @@ string ItemPurchase::purchaseItem(ItemPurchaseList* item_list, SellingClothesCol
 			string companyName = cloth.memberSellingClothes[i]->getCompanyName();
 			int price = cloth.memberSellingClothes[i]->getPrice();
 			int amount = cloth.memberSellingClothes[i]->getamount();
+			amount -= 1;
 
-			new_cloth = Clothes(clothName, companyName, price, amount, sellerID);
+			Clothes* new_cloth = new Clothes(clothName, companyName, price, amount, sellerID);
 
-			item_list->addItem(&new_cloth);
+			// 구매목록에 아이템 추가
+			item_list->addItem(new_cloth);
 
 			string detail = sellerID + " " + clothName;
 

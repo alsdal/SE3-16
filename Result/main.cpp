@@ -14,6 +14,9 @@ using namespace std;
 #include "./Boundary/ListSoldoutClothesUI.h"
 #include "./Boundary/PrintSoldStatisticsUI.h"
 #include "./Entity/SellingClothesCollection.h"
+#include "ItemSearch.h"
+#include "ItemPurchase.h"
+#include "ItemPurchaseListView.h"
 
 // 상수 선언
 #define MAX_STRING 32
@@ -39,6 +42,10 @@ RegisterSellingClothesUI registerSellingClothesUI;
 ListSellingClothesUI listSellingClothesUI;
 ListSoldoutClothesUI l1stSoldoutClothesUI;
 PrintSoldStatisticsUI printSoldStatisticsUI;
+ItemPurchaseListView purchaseListView;
+ItemPurchaseList purchaseList;
+ItemPurchase itempurchase;
+ItemSearch itemsearch;
 
 // 변수 선언
 ifstream readFile;
@@ -145,18 +152,76 @@ void doTask()
                 }
                 break;
             }
-            case 5:{
-                switch (menu_level_2)
-                {
+		case 4:
+		{
+			switch (menu_level_2)
+			{
+				case 1:
+				{
+					// 상품명 입력
+					writeFile << "4.1. 상품 정보 검색\n";
+					readFile >> clothname;
+					// 상품정보 검색
+					ItemSearch itemsearch;
+					writeFile << "> " << itemsearch.searchItem(sellingClothesCollection, clothname) << endl;
+
+					break;
+
+				}
+				case 2:
+				{
+					// 상품 구매
+					printf("4.2\n");
+					writeFile << "4.2. 상품 구매\n";
+					writeFile << "> " << itempurchase.purchaseItem(&purchaseList, sellingClothesCollection, clothname) << endl;
+
+					break;
+				}
+				case 3:
+				{
+					// 상품 구매 내역 조회
+					printf("4.3\n");
+					writeFile << "4.3. 상품 구매 내역 조회\n";
+					writeFile << "> " << purchaseListView.checkPurchaseList(&purchaseList) << endl;
+
+					break;
+				}
+				case 4:
+				{
+					// 상품 구매만족도 평가
+					// 구매만족도 입력
+					int evaluation = 0;
+					printf("4.4\n");
+					writeFile << "4.4 상품 구매만족도 평가\n";
+					readFile >> evaluation;
+
+					writeFile << purchaseListView.checkSatisfaction(&purchaseList, sellingClothesCollection, clothname, evaluation);
+
+					break;
+				}
+				default:
+				{
+					break;
+				}
+			}
+			break;
+		}
+        case 5:
+		{
+            switch (menu_level_2)
+            {
                 case 1:
-                    printStatistics();
-                    break;
-                
+				{
+					printStatistics();
+					break;
+				}
                 default:
-                    break;
-                }
-                break;
+				{
+					break;
+				}
             }
+                break;
+        }
 		case 6:
 		{
 			switch (menu_level_2)

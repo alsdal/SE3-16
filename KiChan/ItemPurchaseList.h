@@ -18,7 +18,7 @@ public:
 
 	void addItem(Clothes *cloth);
 	string callPurchaseList();
-	string viewPurchaseSatisfaction(ItemPurchaseList* item_list, SellingClothesCollection sellingClothesCollection, string name, int num);
+	string viewPurchaseSatisfaction(SellingClothesCollection sellingClothesCollection, string name, int num);
 
 	~ItemPurchaseList() {};
 };

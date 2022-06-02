@@ -23,14 +23,15 @@ bool program_exit();
 void regist(string clothesName, string companyName, int price, int amount, string UserID);
 
 //변수 선언
-ifstream readFile(INPUT_FILE_NAME);
-ofstream writeFile(OUTPUT_FILE_NAME);
+ifstream readFile;
+ofstream writeFile;
 
 SellingClothesCollection sellingClothesCollection;
 RegisterSellingClothesUI registerSellingClothesUI;
 ItemPurchaseListView purchaseListView;
 ItemPurchaseList purchaseList;
 ItemPurchase itempurchase;
+ItemSearch itemsearch;
 
 int num = 0;
 
@@ -39,12 +40,14 @@ string clothname;
 
 int main()
 {
+	readFile.open(INPUT_FILE_NAME);
 	if (!readFile)
 	{
 		perror("error fopen input.txt");
 		return 0;
 	}
 
+	writeFile.open(OUTPUT_FILE_NAME);
 	if (!writeFile)
 	{
 		perror("error fopen output.txt");
@@ -69,19 +72,7 @@ void doTask()
 	while (!is_program_exit)
 	{
 		// 입력 파일에서 메뉴 숫자 2개를 읽기
-		string str;
-		getline(readFile, str);
-		istringstream ss(str);
-		vector<string> menu;
-		string stringBuffer;
-		menu.clear();
-
-		while (getline(ss, stringBuffer, ' ')) {
-			menu.push_back(stringBuffer);
-		}
-
-		menu_level_1 = stoi(menu[0]);
-		menu_level_2 = stoi(menu[1]);
+		readFile >> menu_level_1 >> menu_level_2;
 		
 		// 메뉴 구분 및 해당 연산 수행
 		switch (menu_level_1)
@@ -108,7 +99,10 @@ void doTask()
 					//판매 의류 등록, (상품명, 제작회사명, 가격, 수량)
 				case 1:
 				{
-					regist(menu[2], menu[3], stoi(menu[4]), stoi(menu[5]), userID);
+					string clothesName, companyName;
+					int price, amount;
+					readFile >> clothesName >> companyName >> price >> amount;
+					regist(clothesName, companyName, price, amount, userID);
 					break;
 				}
 				//등록 상품 조회
@@ -138,9 +132,8 @@ void doTask()
 						// 상품명 입력
 
 						writeFile << "4.1. 상품 정보 검색\n";
-						clothname = menu[2];
+						readFile >> clothname;
 
-						ItemSearch itemsearch;
 						writeFile << "> " << itemsearch.searchItem(sellingClothesCollection, clothname) << endl;
 
 						break;
@@ -152,6 +145,7 @@ void doTask()
 						printf("4.2\n");
 						writeFile << "4.2. 상품 구매\n";
 						writeFile << "> " << itempurchase.purchaseItem(&purchaseList, sellingClothesCollection, clothname) << endl;
+						
 						
 						break;
 					}
@@ -172,7 +166,7 @@ void doTask()
 						int evaluation = 0;
 						printf("4.4\n");
 						writeFile << "4.4 상품 구매만족도 평가\n";
-						menu[2] = evaluation;
+						readFile >> evaluation;
 
 						writeFile << purchaseListView.checkSatisfaction(&purchaseList, sellingClothesCollection, clothname, evaluation);
 
@@ -219,7 +213,8 @@ void join()
 	//fprintf(out_fp, "%s %s %s %s\n", name, SSN, ID, password);
 }
 
-void regist(string clothesName, string companyName, int price, int amount, string UserID) {
+void regist(string clothesName, string companyName, int price, int amount, string UserID)
+{
 	sellingClothesCollection.memberSellingClothes[num++] = registerSellingClothesUI.addSellingClothes(clothesName, companyName, price, amount, UserID);
 	sellingClothesCollection.clothesNum++;
 	string str = "3.1. 판매 의류 등록\n";
@@ -227,6 +222,7 @@ void regist(string clothesName, string companyName, int price, int amount, strin
 	writeFile << str;
 	writeFile << "\n";
 }
+
 
 bool program_exit()
 {
