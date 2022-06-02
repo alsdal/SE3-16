@@ -9,7 +9,10 @@
 using namespace std;
 
 
-
+// Class : SellingClothesCollection
+// Description: 판매중인 상품 Collection 클래스
+// Author: Hyebin Cho
+//
 class SellingClothesCollection
 {
     private:

@@ -8,7 +8,10 @@
 
 using namespace std;
 
-
+// Class : PrintSoldStatisticsUI
+// Description: 판매통계  UI
+// Author: Hyebin Cho
+//
 class PrintSoldStatisticsUI
 {
 private:
@@ -16,10 +19,6 @@ private:
 public:
     string getSoldStatistics(SellingClothesCollection sellingClothesCollection);
 };
-
-string PrintSoldStatisticsUI::getSoldStatistics(SellingClothesCollection sellingClothesCollection){
-    return printSoldStatistics.getSellingStatistics(sellingClothesCollection);
-}
 
 
 

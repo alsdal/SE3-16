@@ -6,6 +6,10 @@
 
 using namespace std;
 
+// Class : ListSoldoutClothesUI
+// Description: 판매완료 상품 확인 UI
+// Author: Hyebin Cho
+//
 class ListSoldoutClothesUI
 {
     private:
@@ -14,9 +18,5 @@ class ListSoldoutClothesUI
         string showSoldoutList(SellingClothesCollection sellingClothesCollection);
 };
 
-
-string ListSoldoutClothesUI::showSoldoutList(SellingClothesCollection sellingClothesCollection){
-    return listSoldoutClothes.showSoldoutList(sellingClothesCollection);
-}
 
 #endif

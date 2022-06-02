@@ -8,7 +8,10 @@
 
 using namespace std;
 
-
+// Class : SellingClothes
+// Description: 판매중인 상품 클래스
+// Author: Hyebin Cho
+//
 class SellingClothes
 {
     private:
@@ -18,16 +21,5 @@ class SellingClothes
 };
 
 
-string SellingClothes::listSellingClothes(SellingClothesCollection sellingClothesCollection){
-    return sellingClothesCollection.getClothes(sellingClothesCollection);
-    /*Clothes* clothes = sellingClothesCollection.findFirst();
-    while(clothes != NULL){
-        string detail = clothes->getClothesDetail();
-        cout << " here" << endl;
-        cout << "> " << detail << endl;
-        clothes = sellingClothesCollection.getNext(clothes);
-    }
-    */
-}
 
 #endif

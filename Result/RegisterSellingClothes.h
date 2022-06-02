@@ -4,6 +4,10 @@
 #include "SellingClothesCollection.h"
 using namespace std;
 
+// Class : RegisterSellingClothes
+// Description: 판매등록 Control 클래스
+// Author: Hyebin Cho
+//
 class RegisterSellingClothes
 {
     private:
@@ -15,10 +19,6 @@ class RegisterSellingClothes
 };
 
 
-Clothes* RegisterSellingClothes::addSellingClothes(string clothesName, string clothesCompanyName, int price, int amount, string SellerID ){
-   return sellingClothesCollection.addNewClothesMember(clothesName,  clothesCompanyName, price, amount,SellerID);
-
-}
 
 
 #endif

@@ -8,18 +8,17 @@
 
 using namespace std;
 
+// Class : ListSellingClothesUI
+// Description: 판매중인 상품 확인 UI
+// Author: Hyebin Cho
+//
 class ListSellingClothesUI
 {
 private:
     ListSellingClothes listSellingClothes;
 public:
-//메인에서 collection 받기
     string showSellingClothesList(SellingClothesCollection sellingClothesCollection);
 };
-
-string ListSellingClothesUI::showSellingClothesList(SellingClothesCollection sellingClothesCollection){
-    return listSellingClothes.getSellingClothesList(sellingClothesCollection);
-}
 
 
 #endif

@@ -5,6 +5,10 @@
 
 using namespace std;
 
+// Class : ListSellingClothes
+// Description: 판매중인 상품 확인 Control 클래스
+// Author: Hyebin Cho
+//
 class ListSellingClothes
 {
     private:
@@ -13,9 +17,5 @@ class ListSellingClothes
         string getSellingClothesList(SellingClothesCollection sellingClothesCollection);
 };
 
-
-string ListSellingClothes::getSellingClothesList(SellingClothesCollection sellingClothesCollection){
-    return sellingClothes.listSellingClothes(sellingClothesCollection);
-}
 
 #endif

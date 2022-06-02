@@ -5,11 +5,11 @@
 
 #include "SellingStatistics.h"
 
-
-
 using namespace std;
 
-
+// Class : PrintSoldStatistics
+// Description: 판매 통계 Control 클래스
+// Author: Hyebin Cho
 class PrintSoldStatistics
 {
 private:
@@ -18,8 +18,5 @@ public:
     string getSellingStatistics(SellingClothesCollection sellingClothesCollection);
 };
 
-string PrintSoldStatistics::getSellingStatistics(SellingClothesCollection sellingClothesCollection){
-    return sellingStatistics.getSellingStatistics(sellingClothesCollection);
-}
 
 #endif

@@ -9,20 +9,19 @@
 
 using namespace std;
 
+// Class : RegisterSellingClothesUI
+// Description: 판매 등록 UI
+// Author: Hyebin Cho
+//
 class RegisterSellingClothesUI
 {
 private:
     RegisterSellingClothes registerSellingClothes;
 public:
-//메인에서 넘겨줘야함
     RegisterSellingClothesUI(void){}
     ~RegisterSellingClothesUI(void){}
     Clothes* addSellingClothes(string ClothesName, string clothesCompanyName, int price, int amount, string SellerID );
     void showRegistPage(){};
 };
 
-Clothes* RegisterSellingClothesUI::addSellingClothes(string ClothesName, string clothesCompanyName, int price, int amount, string SellerID ){
-    return registerSellingClothes.addSellingClothes(ClothesName, clothesCompanyName, price,  amount, SellerID);
-    
-}
 #endif

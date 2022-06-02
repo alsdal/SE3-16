@@ -4,6 +4,10 @@
 #include "SoldoutClothesCollection.h"
 #include "SellingClothesCollection.h"
 
+// Class : SoldoutClothes
+// Description: 판매완료 상품 클래스
+// Author: Hyebin Cho
+//
 class SoldoutClothes
 {
 private:
@@ -12,8 +16,5 @@ public:
     string listSoldoutClothes(SellingClothesCollection sellingClothesCollection);
 };
 
-string SoldoutClothes::listSoldoutClothes(SellingClothesCollection sellingClothesCollection){
-    return soldoutClothesCollection.getSoldoutClothes(sellingClothesCollection);
-}
 
 #endif

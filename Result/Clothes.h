@@ -5,6 +5,11 @@
 
 using namespace std;
 
+
+// Class : Clothes
+// Description: 상품 클래스
+// Author: Hyebin Cho
+//
 class Clothes
 {
 private:
@@ -42,7 +47,7 @@ public:
     float getSatisfaction(){return this->satisfaction;};
     string getCompanyName() { return this->clothesCompanyName; };
     string getClothesDetail();
-    float satisfactionEvaluate(int num);
+    int satisfactionEvaluate(int num);
     string itemSpecific();
 
    ~Clothes(){}
